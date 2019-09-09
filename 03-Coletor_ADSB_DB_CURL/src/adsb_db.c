@@ -239,7 +239,8 @@ typedef int (*sqlite3_callback)(
 static int DB_callback(void *data, int nCols, char** fields, char** colNames){
     //Initializing a new adsMsg node to save the information
     adsbMsg** node = (adsbMsg **)data;
-    *node = (adsbMsg*)realloc(*node, sizeof(adsbMsg));
+    // *node = (adsbMsg*)realloc(*node, sizeof(adsbMsg));
+    *node = (adsbMsg*)malloc(sizeof(adsbMsg));
 	
     (*node)->COLLECTOR_ID[0] = '\0';
 	(*node)->ICAO[0] = '\0';
@@ -287,6 +288,7 @@ static int DB_callback(void *data, int nCols, char** fields, char** colNames){
 
    return 0;
 }
+
 
 /*==============================================
 FUNCTION: DB_readData

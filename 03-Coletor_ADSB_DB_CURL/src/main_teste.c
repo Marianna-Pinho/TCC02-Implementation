@@ -323,92 +323,117 @@
     
 //     DB_saveData(teste);
 
-// ------------------------------------------------------------
-// adsbMsg *node = NULL;
-// DB_readData(&node);
+// ------------------------------------------------------------*/
+// // adsbMsg *node = NULL;
+// // printf("P1:%p\n", node);
+// // DB_readData(&node);
+// // printf("P4:%p\n", node);
 
-// printf("===== MAIN ======\n");
-//    printf("COLID:%s\n", node->COLLECTOR_ID);
-//    printf("ICAO:%s\n", node->ICAO);
-//    printf("Callsign:%s\n", node->callsign);
-//    printf("Lat:%f\n", node->Latitude);
-//    printf("Long:%f\n", node->Longitude);
-//    printf("Alt:%d\n", node->Altitude);
-//    printf("VV:%d\n", node->verticalVelocity);
-//    printf("HV:%f\n", node->horizontalVelocity);
-//    printf("GT:%f\n", node->groundTrackHeading);
-//    printf("T0:%f\n", node->oeTimestamp[0]);
-//    printf("T1:%f\n", node->oeTimestamp[1]);
-//    printf("msgId:%s\n", node->messageID);
-//    printf("msgEven:%s\n", node->oeMSG[0]);
-//    printf("msgOdd:%s\n", node->oeMSG[1]);
-//    printf("msgVel:%s\n", node->messageVEL);
 
-// ========================================== */
+// // printf("===== MAIN ======\n");
+// //    printf("COLID:%s\n", node->COLLECTOR_ID);
+// //    printf("ICAO:%s\n", node->ICAO);
+// //    printf("Callsign:%s\n", node->callsign);
+// //    printf("Lat:%f\n", node->Latitude);
+// //    printf("Long:%f\n", node->Longitude);
+// //    printf("Alt:%d\n", node->Altitude);
+// //    printf("VV:%d\n", node->verticalVelocity);
+// //    printf("HV:%f\n", node->horizontalVelocity);
+// //    printf("GT:%f\n", node->groundTrackHeading);
+// //    printf("T0:%f\n", node->oeTimestamp[0]);
+// //    printf("T1:%f\n", node->oeTimestamp[1]);
+// //    printf("msgId:%s\n", node->messageID);
+// //    printf("msgEven:%s\n", node->oeMSG[0]);
+// //    printf("msgOdd:%s\n", node->oeMSG[1]);
+// //    printf("msgVel:%s\n", node->messageVEL);
+
+
+// // printf("\n\nP5:%p\n", node);
+// // DB_readData(&node);
+// // printf("P6:%p\n", node);
+
+// // printf("===== MAIN2 ======\n");
+// //    printf("COLID:%s\n", node->COLLECTOR_ID);
+// //    printf("ICAO:%s\n", node->ICAO);
+// //    printf("Callsign:%s\n", node->callsign);
+// //    printf("Lat:%f\n", node->Latitude);
+// //    printf("Long:%f\n", node->Longitude);
+// //    printf("Alt:%d\n", node->Altitude);
+// //    printf("VV:%d\n", node->verticalVelocity);
+// //    printf("HV:%f\n", node->horizontalVelocity);
+// //    printf("GT:%f\n", node->groundTrackHeading);
+// //    printf("T0:%f\n", node->oeTimestamp[0]);
+// //    printf("T1:%f\n", node->oeTimestamp[1]);
+// //    printf("msgId:%s\n", node->messageID);
+// //    printf("msgEven:%s\n", node->oeMSG[0]);
+// //    printf("msgOdd:%s\n", node->oeMSG[1]);
+// //    printf("msgVel:%s\n", node->messageVEL);
+
+// //========================================== 
 // /* ================= Data Upload ================= */
-//     adsbMsg *messagesList = NULL;
+//     // adsbMsg *messagesList = NULL;
 
-//     int serialPort = 0, syndrome = 0;
-//     char buffer[29]; buffer[0] = '\0';
-//     adsbMsg *node = NULL;
-//     pthread_t thread;
+//     // int serialPort = 0, syndrome = 0;
+//     // char buffer[29]; buffer[0] = '\0';
+//     // adsbMsg *node = NULL;
+//     // pthread_t thread;
 
-//     //Starting Timer
-//     TIMER_setSignalHandler(timerHandler, SIG);
-//     timer_t timerid = TIMER_create(CLOCKID, SIG);
-//     TIMER_setTimeout(TIMEOUT, timerid);
+//     // //Starting Timer
+//     // TIMER_setSignalHandler(timerHandler, SIG);
+//     // timer_t timerid = TIMER_create(CLOCKID, SIG);
+//     // TIMER_setTimeout(TIMEOUT, timerid);
 
-//     FILE *p = fopen("src/teste01_Todas.txt", "r");
+//     // FILE *p = fopen("src/teste01_Todas.txt", "r");
 
-//     if(p == NULL){
-//         printf("File don't found\n");
+//     // if(p == NULL){
+//     //     printf("File don't found\n");
         
-//     }
+//     // }
 
-//     int du = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
-//     if (du){
-// 	 	printf("ERROR; return code from pthread_create() is %d\n", du);
-//  		exit(-1);
-//  	}
+//     // int du = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+//     // if (du){
+// 	//  	printf("ERROR; return code from pthread_create() is %d\n", du);
+//  	// 	exit(-1);
+//  	// }
 
-//     while(fscanf(p," %s", buffer) != EOF){   //Polling method
-//         buffer[strlen(buffer)] = '\0'; 
+//     // while(fscanf(p," %s", buffer) != EOF){   //Polling method
+//     //     buffer[strlen(buffer)] = '\0'; 
 
 
-//         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
-//         if(CRC_tryMsg(buffer, &syndrome)){
+//     //     //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
+//     //     if(CRC_tryMsg(buffer, &syndrome)){
 
-//             messagesList = decodeMessage(buffer, messagesList, &node);
+//     //         messagesList = decodeMessage(buffer, messagesList, &node);
 
-//             if(isNodeComplete(node) != NULL){
-//                 if(DB_saveData(node) != 0){
-//                     //()printf("The aircraft information couldn't be saved!\n");
-//                 }else{
-//                     //()printf("Aircraft %s information saved succesfully!\n", node->ICAO);
-//                     int pm = pthread_create(&thread, NULL, NET_postMsg, (void *)node);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
-//                     if (pm){
-//                         printf("ERROR; return code from pthread_create() is %d\n", pm);
-//                         exit(-1);
-//                     }
+//     //         if(isNodeComplete(node) != NULL){
+//     //             if(DB_saveData(node) != 0){
+//     //                 //()printf("The aircraft information couldn't be saved!\n");
+//     //             }else{
+//     //                 //()printf("Aircraft %s information saved succesfully!\n", node->ICAO);
+//     //                 int pm = pthread_create(&thread, NULL, NET_postMsg, (void *)node);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
+//     //                 if (pm){
+//     //                     printf("ERROR; return code from pthread_create() is %d\n", pm);
+//     //                     exit(-1);
+//     //                 }
                     
 
-//                 }
-//             }else{
-//                 //()printf("Information is not complete!\n");
-//             }
-//         }
+//     //             }
+//     //         }else{
+//     //             //()printf("Information is not complete!\n");
+//     //         }
+//     //     }
         
-//         node = NULL;
-// 		memset(buffer, 0x0, 29);
+//     //     node = NULL;
+// 	// 	memset(buffer, 0x0, 29);
 
-//         // //It cleans the old nodes in the messages list
-//         if(timer_flag){
-//             messagesList = LIST_delOldNodes(messagesList);
-//             timer_flag = 0;
-//         }
+//     //     // //It cleans the old nodes in the messages list
+//     //     if(timer_flag){
+//     //         messagesList = LIST_delOldNodes(messagesList);
+//     //         timer_flag = 0;
+//     //     }
 
-// 		sleep(1);
-//     }
+// 	// 	sleep(1);
+//     // }
    
 
 

@@ -276,7 +276,6 @@ void* NET_postMsg(void *node){
     }
 
     clearMinimalInfo(msg);
-    printf("Lat:%f\nLon:%f\nAlt:%d\nCall:%s\nnLast:%s\n",
-    msg->Latitude, msg->Longitude, msg->Altitude, msg->callsign, msg->oeMSG[!msg->lastTime]);
+    free(msg); //To clear the bytes allocated in the database callback function
     pthread_exit(NULL); 
 }
