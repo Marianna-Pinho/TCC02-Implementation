@@ -98,6 +98,44 @@ void main(){
 		sleep(1);
 	}	
 
+	/*===== Teste Post ====*/
+
+	// pthread_t thread;
+
+    // int du = pthread_create(&thread, NULL, dataUploader, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+    // if (du){
+    //     printf("ERROR; return code from pthread_create() is %d\n", du);
+    //     exit(-1);
+    // }
+
+    // adsbMsg *teste = criar("E491A1");
+    // strcpy(teste->COLLECTOR_ID,"5980d171-73fb-46c1-aea1-e7b5d5c1de60");
+    // strcpy(teste->callsign, "A");
+    // teste->Latitude = -4.764374;
+    // teste->Longitude = -39.116211;
+    // teste->Altitude = 22300;
+    // teste->verticalVelocidade = -2880;
+    // teste->horizontalVelocidade = 460.508423;
+    // teste->groundTrackHeading = 354.017029;
+    // teste->oeTimestamp[teste->lastTime] = 619987240;
+    // //strcpy(teste->messageID, "8DE491A120501373E39C603B0D55");
+    // //strcpy(teste->oeMSG[0], "8DE491A1587570D2112DC1359251");
+    // //strcpy(teste->oeMSG[1], "8DE491A1587544E06F65595BF018");
+    // //strcpy(teste->mensagemVEL, "8DE491A19914313968B837E83E8D");
+
+    // int count = 0;
+    // while(1){
+    //     if(count % 25000 == 0){
+    //         int pm = pthread_create(&thread, NULL, postMessage, (void *)teste);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
+	// 	    if (pm){
+	//  			printf("ERROR; return code from pthread_create() is %d\n", pm);
+ 	// 			exit(-1);
+ 	// 		}
+    //          count = 0;
+    //     }
+    //     count+=1;
+    //     usleep(1000);
+    // }	
 }
 
 	

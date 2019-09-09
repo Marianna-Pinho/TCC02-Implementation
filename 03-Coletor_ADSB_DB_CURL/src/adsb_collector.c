@@ -3,6 +3,7 @@
 #include <string.h>
 #include <signal.h>
 #include <unistd.h>
+#include <pthread.h>
 #include "adsb_auxiliars.h"
 #include "adsb_lists.h"
 #include "adsb_time.h"
@@ -10,6 +11,7 @@
 #include "adsb_serial.h"
 #include "adsb_db.h"
 #include "adsb_createLog.h"
+#include "adsb_network.h"
 
 adsbMsg *messagesList = NULL;
 
@@ -46,22 +48,21 @@ int main(){
     TIMER_setTimeout(TIMEOUT, timerid);
 
 
+    pthread_t thread;
+
+    //This thread sends a hello to the server
+    int sendHello = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+    if (sendHello){
+	 	printf("ERROR; return code from pthread_create() is %d\n", sendHello);
+ 		exit(-1);
+ 	}
+
     while(1){   //Polling method
 
         SERIAL_communicate(&serialPort, buffer);
 
-        //Testes: salva todas as mensagens recebidas.
-        FILE *totalMsg = fopen("totalMsg.txt", "a");
-        fprintf(totalMsg,"%s,%s", buffer, getFormatedTime());
-        fclose(totalMsg); 
-
         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
         if(CRC_tryMsg(buffer, &syndrome)){
-            
-           //Teste: salva todas as mensagens que não tiveram erros ou que seus erros foram corrigidos. (noerroMsg + correctCRC)
-            FILE *crcM = fopen("crcM.txt", "a");
-            fprintf(crcM,"%s,%s", buffer, getFormatedTime());
-            fclose(crcM);
 
             messagesList = decodeMessage(buffer, messagesList, &node);
 
@@ -70,7 +71,12 @@ int main(){
                     //()printf("The aircraft information couldn't be saved!\n");
                 }else{
                     //()printf("Aircraft %s information saved succesfully!\n", node->ICAO);
-                    clearMinimalInfo(node);
+                    //This thread posts a complete message to the server
+                    int postMsg = pthread_create(&thread, NULL, NET_postMsg, (void *)node);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
+                    if (postMsg){
+                        printf("ERROR; return code from pthread_create() is %d\n", postMsg);
+                        exit(-1);
+                    }
                 }
             }else{
                 //()printf("Information is not complete!\n");

@@ -10,6 +10,7 @@
 #include "adsb_time.h"
 #include "adsb_userInfo.h"
 #include "adsb_network.h"
+#include "adsb_decoding.h"
 
 /*==============================================
 FUNCTION: CURL_init
@@ -45,6 +46,8 @@ by refecence.
 ================================================*/
 void CURL_serialize(adsbMsg *msg, char **jsonMsg){
 
+    char auxS[21]; //string used as auxiliary in double conversion
+
     json_object *json;
     json = json_object_new_object();
 
@@ -52,7 +55,8 @@ void CURL_serialize(adsbMsg *msg, char **jsonMsg){
     json_object_object_add(json,"modeSCode",json_object_new_string(msg->ICAO));
     json_object_object_add(json,"callsign",json_object_new_string(msg->callsign));
 
-    json_object_object_add(json,"latitude",json_object_new_double(msg->Latitude));
+    sprintf(auxS,"%.10f",msg->Latitude);
+    json_object_object_add(json,"latitude",json_object_new_string(auxS));
     json_object_object_add(json,"longitude",json_object_new_double(msg->Longitude));
     json_object_object_add(json,"altitude",json_object_new_double(msg->Altitude));
 
@@ -271,5 +275,8 @@ void* NET_postMsg(void *node){
         CURL_post(handler, POST_URL, msg);   
     }
 
+    clearMinimalInfo(msg);
+    printf("Lat:%f\nLon:%f\nAlt:%d\nCall:%s\nnLast:%s\n",
+    msg->Latitude, msg->Longitude, msg->Altitude, msg->callsign, msg->oeMSG[!msg->lastTime]);
     pthread_exit(NULL); 
 }

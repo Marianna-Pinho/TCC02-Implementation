@@ -2,8 +2,6 @@
 #include <string.h>
 #include <math.h>
 #include "adsb_auxiliars.h"
-//Teste
-#include "adsb_time.h"
 
 /*==============================================
 FUNCTION: bin2int
@@ -381,17 +379,7 @@ int CRC_tryMsg(char *msg, int *syndrome){
 	if(!CRC_verifyMsg(msg, syndrome)){
 		//()printf("CRC detected an error!\n");
 
-		//Teste: todas as mensagens salvas nesse arquivo estão com erro ou não são do tipo ADS-B
-		FILE *erroCRC = fopen("erroCRC.txt", "a");
-		fprintf(erroCRC,"%s,%s", msg, getFormatedTime());
-		fclose(erroCRC);
-
 		if(CRC_correctMsg(msg, syndrome)){
-
-			//Teste:todas as mensagens salvas nesse arquivo tiveram seu erro corrigido
-			FILE *correctCRC = fopen("correctCRC.txt", "a");
-			fprintf(correctCRC,"%s,%s", msg, getFormatedTime());
-			fclose(correctCRC);
 
 			//()printf("Message successfully corrected!\n");
 			return 1;

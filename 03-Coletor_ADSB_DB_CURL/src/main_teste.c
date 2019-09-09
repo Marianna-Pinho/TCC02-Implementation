@@ -12,12 +12,15 @@
 // #include "adsb_createLog.h"
 // #include "adsb_network.h"
 
-// volatile int flag = 0;
+// volatile int timer_flag = 0;
 // static void handler(int sig, siginfo_t *si, void *uc)
 // {
-//     flag = 1;
+//     //flag = 1;
 // }
 
+// static void timerHandler(int sig, siginfo_t *si, void *uc){
+//     timer_flag = 1;
+// }
 
 // void main(){
 // /* ======= LISTS =============
@@ -343,15 +346,104 @@
 
 // ========================================== */
 // /* ================= Data Upload ================= */
+//     adsbMsg *messagesList = NULL;
+
+//     int serialPort = 0, syndrome = 0;
+//     char buffer[29]; buffer[0] = '\0';
+//     adsbMsg *node = NULL;
 //     pthread_t thread;
+
+//     //Starting Timer
+//     TIMER_setSignalHandler(timerHandler, SIG);
+//     timer_t timerid = TIMER_create(CLOCKID, SIG);
+//     TIMER_setTimeout(TIMEOUT, timerid);
+
+//     FILE *p = fopen("src/teste01_Todas.txt", "r");
+
+//     if(p == NULL){
+//         printf("File don't found\n");
+        
+//     }
 
 //     int du = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
 //     if (du){
-//         printf("ERROR; return code from pthread_create() is %d\n", du);
-//         exit(-1);
-//     }
+// 	 	printf("ERROR; return code from pthread_create() is %d\n", du);
+//  		exit(-1);
+//  	}
 
-//     while(1);	
+//     while(fscanf(p," %s", buffer) != EOF){   //Polling method
+//         buffer[strlen(buffer)] = '\0'; 
+
+
+//         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
+//         if(CRC_tryMsg(buffer, &syndrome)){
+
+//             messagesList = decodeMessage(buffer, messagesList, &node);
+
+//             if(isNodeComplete(node) != NULL){
+//                 if(DB_saveData(node) != 0){
+//                     //()printf("The aircraft information couldn't be saved!\n");
+//                 }else{
+//                     //()printf("Aircraft %s information saved succesfully!\n", node->ICAO);
+//                     int pm = pthread_create(&thread, NULL, NET_postMsg, (void *)node);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
+//                     if (pm){
+//                         printf("ERROR; return code from pthread_create() is %d\n", pm);
+//                         exit(-1);
+//                     }
+                    
+
+//                 }
+//             }else{
+//                 //()printf("Information is not complete!\n");
+//             }
+//         }
+        
+//         node = NULL;
+// 		memset(buffer, 0x0, 29);
+
+//         // //It cleans the old nodes in the messages list
+//         if(timer_flag){
+//             messagesList = LIST_delOldNodes(messagesList);
+//             timer_flag = 0;
+//         }
+
+// 		sleep(1);
+//     }
+   
+
+
+//     // int du = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+//     // if (du){
+//     //     printf("ERROR; return code from pthread_create() is %d\n", du);
+//     //     exit(-1);
+//     // }
+
+//     // adsbMsg* node = NULL;
+//     // adsbMsg *teste = LIST_create("E491A1", &node);
+//     // strcpy(teste->callsign, "A");
+//     // teste->callsign[strlen(teste->callsign)] = '\0';
+//     // teste->Latitude = -4.764374;
+//     // teste->Longitude = -39.116211;
+//     // teste->Altitude = 22300;
+//     // teste->verticalVelocity = -2880;
+//     // teste->horizontalVelocity = 460.508423;
+//     // teste->groundTrackHeading = 354.017029;
+//     // teste->oeTimestamp[teste->lastTime] = 619987240;
+//     // strcpy(teste->messageID, "8DE491A120501373E39C603B0D55");
+//     // strcpy(teste->oeMSG[0], "8DE491A1587570D2112DC1359251");
+//     // strcpy(teste->oeMSG[1], "8DE491A1587544E06F65595BF018");
+//     // strcpy(teste->messageVEL, "8DE491A19914313968B837E83E8D");
+
+//     // int count = 0;
+//     // while(1){
+//     //         int pm = pthread_create(&thread, NULL, NET_postMsg, (void *)teste);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
+// 	// 	    if (pm){
+// 	//  			printf("ERROR; return code from pthread_create() is %d\n", pm);
+//  	// 			exit(-1);
+//  	// 		}
+        
+//     //     usleep(500000);
+//     // }	
 
 // /*================ TESTING LOGGING ===============
 //     char *source = "main_code";

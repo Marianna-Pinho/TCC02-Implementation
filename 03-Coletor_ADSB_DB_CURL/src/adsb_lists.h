@@ -40,9 +40,9 @@ typedef struct msg{
     int lastTime;
 	double uptadeTime; //field used to order the list. It isn't sent to the server.
     
-    //ADSB position
-	float Latitude;
-	float Longitude;
+    //ADSB position - Double has greater precision than Float numbers
+	double Latitude;
+	double Longitude;
 	int Altitude;
 	
 	//Airplane velocity

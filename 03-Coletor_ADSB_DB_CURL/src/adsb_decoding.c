@@ -268,8 +268,8 @@ the Compact Position Reporting Algorithm". To build
 the lookup table, the original formula was applied 
 for each one of the 58 possible values.
 ================================================*/
-int getCprNL(float lat){
-	float LAT = abs(lat);
+int getCprNL(double lat){
+	double LAT = abs(lat);
 	int i = 0;
 
 	for(i = 2; i <= 59;i++){
@@ -292,19 +292,19 @@ tives timestamps, and returns the latitude and
 longitude of the aircraft that sent the data,
 based on those messages.
 ================================================*/
-int getAirbornePosition(char *msgEVEN, char *msgODD, double timeE, double timeO, float *lat, float *lon){
-	float latCPR_even = 0.0, latCPR_odd = 0.0,
+int getAirbornePosition(char *msgEVEN, char *msgODD, double timeE, double timeO, double *lat, double *lon){
+	double latCPR_even = 0.0, latCPR_odd = 0.0,
 	lonCPR_even = 0.0, lonCPR_odd = 0.0;
 
-	float latSizeZone_even = 0.0, latSizeZone_odd = 0.0;
-	float latEven = 0.0, latOdd = 0.0;
+	double latSizeZone_even = 0.0, latSizeZone_odd = 0.0;
+	double latEven = 0.0, latOdd = 0.0;
 	float latIndex = 0.0;
 
-	latCPR_even = ((float)getCPRLatitude(msgEVEN))/(131072.0);   //It converts the integer value in a fraction of the total value it can assumes, which is 131072 (2^17).	
-	latCPR_odd = ((float)getCPRLatitude(msgODD))/(131072.0);
+	latCPR_even = ((double)getCPRLatitude(msgEVEN))/(131072.0);   //It converts the integer value in a fraction of the total value it can assumes, which is 131072 (2^17).	
+	latCPR_odd = ((double)getCPRLatitude(msgODD))/(131072.0);
 
-	lonCPR_even = ((float)getCPRLongitude(msgEVEN))/(131072.0);
-	lonCPR_odd = ((float)getCPRLongitude(msgODD))/(131072.0);
+	lonCPR_even = ((double)getCPRLongitude(msgEVEN))/(131072.0);
+	lonCPR_odd = ((double)getCPRLongitude(msgODD))/(131072.0);
 
 	latSizeZone_even = 6.0; 	//It calculates the size of the latitude zone in the North-South direction, which is given by 360.0/60.0
 	latSizeZone_odd = 6.101694915254237288; 	//It's the result of 360.0/59.0
@@ -442,8 +442,8 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 	icao[0] = '\0';
 
 	int rateV = 0, alt = 0;
-	float lat = 0.0, lon = 0.0,
-	heading = 0.0, vel_h = 0.0;
+	double lat = 0.0, lon = 0.0;
+	float heading = 0.0, vel_h = 0.0;
 	
 	adsbMsg* no = NULL;
 	static adsbMsg* LastNode = NULL;
@@ -452,11 +452,6 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 	if((getDownlinkFormat(buffer) == 17) && (strlen(buffer) == 28)){ //It verifies if the message received is of ADS-B type
 		//()printf("\n\n***********ADSB MESSAGE*************\n");
 		//()printf("MESSAGE:%s\n", buffer);
-
-		//Testes
-		FILE *isADSBM = fopen("isADSBM.txt", "a");
-        fprintf(isADSBM,"%s,%s", buffer, getFormatedTime());
-        fclose(isADSBM);
 
 //Catching ICAO
 		getICAO(buffer, icao);
@@ -482,11 +477,6 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 //Catching the Callsign
 		if((1 <= getTypecode(buffer)) && (getTypecode(buffer) <= 4)){
 
-			//Testes
-			FILE *callsignM = fopen("callsignM.txt", "a");
-			fprintf(callsignM,"%s,%s", buffer, getFormatedTime());
-			fclose(callsignM);
-
 			if(getCallsign(buffer, no->callsign) < 0){
 				//()printf("ADS-B Decoding Error: callsign couldn't be decoded!\n");
 				LOG_add("decodeMessage", "callsign couldn't be decoded");
@@ -504,11 +494,6 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 
 //Catching Latitude, Longitude and Altitude
 		else if(isPositionMessage(buffer)){
-
-			//Testes
-			FILE *positionM = fopen("positionM.txt", "a");
-			fprintf(positionM,"%s,%s", buffer, getFormatedTime());
-			fclose(positionM);
 
 			no = setPosition(buffer, no);
 			
@@ -540,11 +525,6 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 		}
 //Catching the velocity
 		else if(getTypecode(buffer) == 19){
-
-			//Testes
-			FILE *velocityM = fopen("velocityM.txt", "a");
-			fprintf(velocityM,"%s,%s", buffer, getFormatedTime());
-			fclose(velocityM);
 		
 			if(getVelocities(buffer, &vel_h, &heading, &rateV, tag) < 0){
 				//()printf("ADS-B Decoding Error: velocities couldn't be decoded!\n");
@@ -576,11 +556,6 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 		//()printf("\n\n###############No ADS-B Message#####################\n");
 		//()printf("|Message: %s\n", buffer);
 
-		//Testes
-			FILE *noADSBM = fopen("noADSBM.txt", "a");
-			fprintf(noADSBM,"%s,%s", buffer, getFormatedTime());
-			fclose(noADSBM);
-
 	}
 
 	memset(buffer, 0x0, 29);
@@ -605,7 +580,7 @@ adsbMsg* isNodeComplete(adsbMsg *node){
 	}
 
 	if((strlen(node->oeMSG[0]) != 0) && (strlen(node->oeMSG[1]) != 0)){ //It verifies if there are the two position messages
-		if((node->ICAO[0] != 0) && (node->Altitude != 0)){	// It verifies if there is an ICAO and an Altitude
+		if((node->ICAO[0] != 0) && (node->Altitude != 0) && (node->callsign[0] != 0)){	// It verifies if there is an ICAO and an Altitude
 			
 			//node->oeMSG[!(node->lastTime)][0] = '\0'; //It cleans up the oldest message			
 			//node->Altitude = 0;
