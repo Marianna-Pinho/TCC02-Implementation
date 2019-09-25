@@ -320,24 +320,19 @@ void *NET_addBuffer(void *msg){
     
     sem_wait(&semaphore); 
 
-    adsbMsg *node = (adsbMsg*) msg;
+    adsbMsg* node = (adsbMsg*) msg;
     
-    if(sendList == NULL){
-        sendList = (adsbMsg*)malloc(sizeof(adsbMsg));
-        *sendList = *node;
-        count_size++;
-        
-    }else{
-        if(count_size >= TAM_BUFFER){
-            adsbMsg *aux = sendList;
-            sendList = sendList->next;
-            free(aux);
-        }
-        sendList = LIST_insert2(sendList, node);
-        count_size++;
+    if(count_size >= TAM_BUFFER){
+        adsbMsg* aux = sendList;
+        sendList = sendList->next;
+        free(aux);
+        count_size--;
     }
 
-    free(node); //To clear the bytes allocated in the database callback function
+    sendList = LIST_insert2(sendList, node);
+    count_size++;
+    
+    free(node);
     node = NULL;
 
     sem_post(&semaphore);
@@ -381,7 +376,7 @@ char *NET_readBuffer(char *finalJson){
     
     sendList = NULL;
     count_size = 0;
-
+   
     sem_post(&semaphore);
 
     return finalJson;

@@ -109,12 +109,110 @@ storing all messages received in a period of time.
 adsbMsg *LIST_insert2(adsbMsg* list, adsbMsg* node){
 	adsbMsg* aux;
 
-	for(aux = list; aux->next != NULL; aux = aux->next);
+	if(list == NULL){
 
-	aux->next = (adsbMsg*)malloc(sizeof(adsbMsg));
-	*(aux->next) = *node;
-	aux->next->next = NULL;            //It adds a new node in the end of the list and makes the node to point to NULL;
+		list = (adsbMsg*)malloc(sizeof(adsbMsg));
 
+		list->COLLECTOR_ID[0] = '\0';
+		list->ICAO[0] = '\0';
+		list->callsign[0] = '\0';
+		list->oeTimestamp[0] = 0;
+		list->oeTimestamp[1] = 0;
+		list->lastTime = 0;
+		list->uptadeTime = getCurrentTime();
+		list->Latitude = 0;
+		list->Longitude = 0;
+		list->Altitude = 0;
+		list->horizontalVelocity = 0;
+		list->verticalVelocity = 0;
+		list->groundTrackHeading = 0;
+		list->messageID[0] = '\0';
+		list->oeMSG[0][0] = '\0';
+		list->oeMSG[1][0] = '\0';
+		list->messageVEL[0] = '\0';
+
+		strcpy(list->COLLECTOR_ID, node->COLLECTOR_ID);
+		list->COLLECTOR_ID[strlen(node->COLLECTOR_ID)] = '\0';
+		strcpy(list->ICAO, node->ICAO);
+		list->ICAO[strlen(node->ICAO)] = '\0';
+		strcpy(list->callsign, node->callsign);
+		list->callsign[strlen(node->callsign)] = '\0';
+
+		list->Latitude = node->Latitude;
+		list->Longitude = node->Longitude;
+		list->Altitude = node->Altitude;
+		list->verticalVelocity = node->verticalVelocity;
+		list->horizontalVelocity = node->horizontalVelocity;
+		list->groundTrackHeading = node->groundTrackHeading;
+
+		list->oeTimestamp[0] = node->oeTimestamp[0];
+		list->oeTimestamp[1] = node->oeTimestamp[1];
+
+		strcpy(list->messageID, node->messageID);
+		list->messageID[strlen(node->messageID)] = '\0';
+		strcpy(list->oeMSG[0], node->oeMSG[0]);
+		list->oeMSG[0][strlen(node->oeMSG[0])] = '\0';
+		strcpy(list->oeMSG[1], node->oeMSG[1]);
+		list->oeMSG[1][strlen(node->oeMSG[1])] = '\0';
+		strcpy(list->messageVEL, node->messageVEL);
+		list->messageVEL[strlen(node->messageVEL)] = '\0';
+
+		list->next = NULL;            
+
+	}else{
+
+		for(aux = list; aux->next != NULL; aux = aux->next);
+		
+		aux->next = (adsbMsg*)malloc(sizeof(adsbMsg));
+
+		aux->next->COLLECTOR_ID[0] = '\0';
+		aux->next->ICAO[0] = '\0';
+		aux->next->callsign[0] = '\0';
+		aux->next->oeTimestamp[0] = 0;
+		aux->next->oeTimestamp[1] = 0;
+		aux->next->lastTime = 0;
+		aux->next->uptadeTime = getCurrentTime();
+		aux->next->Latitude = 0;
+		aux->next->Longitude = 0;
+		aux->next->Altitude = 0;
+		aux->next->horizontalVelocity = 0;
+		aux->next->verticalVelocity = 0;
+		aux->next->groundTrackHeading = 0;
+		aux->next->messageID[0] = '\0';
+		aux->next->oeMSG[0][0] = '\0';
+		aux->next->oeMSG[1][0] = '\0';
+		aux->next->messageVEL[0] = '\0';
+
+		strcpy(aux->next->COLLECTOR_ID, node->COLLECTOR_ID);
+		aux->next->COLLECTOR_ID[strlen(node->COLLECTOR_ID)] = '\0';
+		strcpy(aux->next->ICAO, node->ICAO);
+		aux->next->ICAO[strlen(node->ICAO)] = '\0';
+		strcpy(aux->next->callsign, node->callsign);
+		aux->next->callsign[strlen(node->callsign)] = '\0';
+
+		aux->next->Latitude = node->Latitude;
+		aux->next->Longitude = node->Longitude;
+		aux->next->Altitude = node->Altitude;
+		aux->next->verticalVelocity = node->verticalVelocity;
+		aux->next->horizontalVelocity = node->horizontalVelocity;
+		aux->next->groundTrackHeading = node->groundTrackHeading;
+
+		aux->next->oeTimestamp[0] = node->oeTimestamp[0];
+		aux->next->oeTimestamp[1] = node->oeTimestamp[1];
+
+		strcpy(aux->next->messageID, node->messageID);
+		aux->next->messageID[strlen(node->messageID)] = '\0';
+		strcpy(aux->next->oeMSG[0], node->oeMSG[0]);
+		aux->next->oeMSG[0][strlen(node->oeMSG[0])] = '\0';
+		strcpy(aux->next->oeMSG[1], node->oeMSG[1]);
+		aux->next->oeMSG[1][strlen(node->oeMSG[1])] = '\0';
+		strcpy(aux->next->messageVEL, node->messageVEL);
+		aux->next->messageVEL[strlen(node->messageVEL)] = '\0';
+
+		aux->next->next = NULL; //It adds a new node in the end of the list and makes the node to point to NULL;
+
+	}
+	
 	return list;					//SUCCESS
 }
 

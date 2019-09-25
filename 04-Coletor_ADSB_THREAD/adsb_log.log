@@ -3607,3 +3607,34 @@ Wed Sep 25 14:08:40 2019 | DB_saveADSBInfo | Data was saved successfully
 Wed Sep 25 14:08:40 2019 | DB_saveAirline | Data was saved successfully
 Wed Sep 25 14:08:40 2019 | DB_readData | Data was read successfully
 Wed Sep 25 14:08:42 2019 | suddenStop | Collector was closed
+Wed Sep 25 14:16:54 2019 | CURL_post | Unknown error
+Wed Sep 25 14:19:08 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 14:19:08 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 14:19:08 2019 | DB_readData | Data was read successfully
+Wed Sep 25 14:19:13 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 14:19:13 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 14:19:13 2019 | DB_readData | Data was read successfully
+Wed Sep 25 14:19:14 2019 | suddenStop | Collector was closed
+Wed Sep 25 14:29:40 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 14:29:41 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 14:29:41 2019 | DB_readData | Data was read successfully
+Wed Sep 25 14:29:46 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 14:29:46 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 14:29:46 2019 | DB_readData | Data was read successfully
+Wed Sep 25 14:29:50 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 14:29:50 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 14:29:50 2019 | DB_readData | Data was read successfully
+Wed Sep 25 14:29:51 2019 | suddenStop | Collector was closed
+Wed Sep 25 15:43:13 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 15:43:14 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 15:43:14 2019 | DB_readData | Data was read successfully
+Wed Sep 25 15:43:19 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 15:43:19 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 15:43:19 2019 | DB_readData | Data was read successfully
+Wed Sep 25 15:43:23 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 15:43:23 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 15:43:23 2019 | DB_readData | Data was read successfully
+Wed Sep 25 15:43:35 2019 | DB_saveADSBInfo | Data was saved successfully
+Wed Sep 25 15:43:35 2019 | DB_saveAirline | Data was saved successfully
+Wed Sep 25 15:43:35 2019 | DB_readData | Data was read successfully
+Wed Sep 25 15:43:37 2019 | suddenStop | Collector was closed
