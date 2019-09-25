@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <curl/curl.h>
+#include <semaphore.h>
 #include </usr/include/json-c/json.h>
 #include "adsb_createLog.h"
 #include "adsb_lists.h"
@@ -11,6 +12,10 @@
 #include "adsb_userInfo.h"
 #include "adsb_network.h"
 #include "adsb_decoding.h"
+
+adsbMsg *sendList = NULL;
+sem_t semaphore;
+int count_size = 0;
 
 /*==============================================
 FUNCTION: CURL_init
@@ -272,8 +277,108 @@ void* NET_postMsg(void *node){
         printf("NET: handler initialized\n");
         CURL_post(handler, POST_URL, msg);   
     }
-
-    clearMinimalInfo(msg);
+    
     free(msg); //To clear the bytes allocated in the database callback function
     pthread_exit(NULL); 
+}
+
+/*==============================================
+FUNCTION: SEM_init
+INPUT: void
+OUTPUT: integer
+DESCRIPTION: this function initialize the global
+variable that represent a semaphore. If the variable
+is successfully initialized, the function returns 0,
+otherwise, it returns -1.
+================================================*/
+int SEM_init(){
+    return sem_init(&semaphore, 0, 1);
+}
+
+/*==============================================
+FUNCTION: SEM_destroy
+INPUT: void
+OUTPUT: integer
+DESCRIPTION: this function destroys the semaphore
+initialized in the variable semaphore. If the variable
+is successfully initialized, the function returns 0,
+otherwise, it returns -1.
+================================================*/
+int SEM_destroy(){
+    return sem_destroy(&semaphore);
+}
+
+/*==============================================
+FUNCTION: NET_addBuffer
+INPUT: an adsbMsg pointer
+OUTPUT: void
+DESCRIPTION: this function receives an adsbMsg node
+and saves it in the list that stores the messages
+to be sent to the server.
+================================================*/
+void *NET_addBuffer(void *msg){
+    
+    sem_wait(&semaphore);
+    adsbMsg *node = (adsbMsg*) msg;
+    
+    if(sendList == NULL){
+        sendList = (adsbMsg*)malloc(sizeof(adsbMsg));
+        *sendList = *node;
+        count_size++;
+        
+    }else{
+        if(count_size >= TAM_BUFFER){
+            adsbMsg *aux = sendList;
+            sendList = sendList->next;
+            free(aux);
+        }
+        sendList = LIST_insert2(sendList, node);
+        count_size++;
+    }
+        
+    sem_post(&semaphore);
+}
+
+/*==============================================
+FUNCTION: NET_readBuffer
+INPUT: a char pointer
+OUTPUT: a char pointer
+DESCRIPTION: this function receives a char pointer,
+serializes all the nodes stored to be sent to the 
+server and returns the address of the vector of chars
+that stores the serialized data.
+================================================*/
+char *NET_readBuffer(char *finalJson){
+    
+    sem_wait(&semaphore);
+    
+    adsbMsg *auxMsg = sendList;
+    adsbMsg *aux2 = sendList;
+    char *auxJson = NULL;
+
+    while(auxMsg != NULL){
+      
+        CURL_serialize(auxMsg, &auxJson);
+
+        int oldSize = strlen(finalJson);
+        finalJson = (char *)realloc(finalJson,(oldSize + strlen(auxJson))*sizeof(char) + 2);
+        
+        if(oldSize != 0){
+            strcat(&finalJson[oldSize], ",");
+        }
+
+        strcat(&finalJson[strlen(finalJson)], auxJson);
+        finalJson[strlen(finalJson)] = '\0';
+
+        free(aux2);
+        auxMsg = auxMsg->next;
+        aux2 = auxMsg;
+    }
+    
+    sendList = NULL;
+    count_size = 0;
+
+    sem_post(&semaphore);
+
+    return finalJson;
 }

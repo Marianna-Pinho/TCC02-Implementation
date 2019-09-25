@@ -98,6 +98,28 @@ adsbMsg *LIST_insert(char *ICAO, adsbMsg* list, adsbMsg**LastNode){
 }
 
 /*==============================================
+FUNCTION: LIST_insert2
+INPUT: a list of type adsbMsg and an adsbMsg pointer.
+OUTPUT: it updates the list passed by reference
+DESCRIPTION: this function adds a new node to the list
+that stores the messages to be sent to the server.
+Different nodes can have the same ICAO, once we are
+storing all messages received in a period of time.
+================================================*/
+adsbMsg *LIST_insert2(adsbMsg* list, adsbMsg* node){
+	adsbMsg* aux;
+
+	for(aux = list; aux->next != NULL; aux = aux->next);
+
+	aux->next = (adsbMsg*)malloc(sizeof(adsbMsg));
+	*(aux->next) = *node;
+	aux->next->next = NULL;            //It adds a new node in the end of the list and makes the node to point to NULL;
+
+	return list;					//SUCCESS
+}
+
+
+/*==============================================
 FUNCTION: LIST_find
 INPUT: a char vector and a list of type adsbMsg
 OUTPUT: an adsbMsg element or NULL.

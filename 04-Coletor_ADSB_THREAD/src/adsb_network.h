@@ -16,6 +16,8 @@ with a remote server.
 
 #define PUT_WAIT 60000
 
+#define TAM_BUFFER 2048
+
 typedef struct msg adsbMsg;
 
 void CURL_init(CURL **handler);
@@ -28,5 +30,13 @@ int CURL_post(CURL *handler, char *url, adsbMsg *message);
 void* NET_putMsg();
 void* NET_dataUpload();
 void* NET_postMsg(void *node);
+void *NET_addBuffer(void *msg);
+char *NET_readBuffer(char* finalJson);
+
+//Semaphore
+int SEM_init();
+int SEM_destroy();
+
+
 
 #endif

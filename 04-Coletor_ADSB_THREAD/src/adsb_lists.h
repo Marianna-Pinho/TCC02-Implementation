@@ -63,6 +63,7 @@ typedef struct msg{
 
 adsbMsg* LIST_create(char *ICAO, adsbMsg**LastNode);
 adsbMsg* LIST_insert(char *ICAO, adsbMsg* list, adsbMsg**LastNode);
+adsbMsg *LIST_insert2(adsbMsg* list, adsbMsg* node);
 adsbMsg* LIST_find(char* ICAO, adsbMsg* list);
 adsbMsg* LIST_removeOne(char* ICAO, adsbMsg** list);
 void	 LIST_removeAll(adsbMsg** list);
