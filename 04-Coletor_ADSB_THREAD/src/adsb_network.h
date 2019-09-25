@@ -15,6 +15,7 @@ with a remote server.
 #define COLLECTOR_URL   "5980d171-73fb-46c1-aea1-e7b5d5c1de60/"
 
 #define PUT_WAIT 60000
+#define POST_WAIT 500
 
 #define TAM_BUFFER 2048
 
@@ -36,7 +37,5 @@ char *NET_readBuffer(char* finalJson);
 //Semaphore
 int SEM_init();
 int SEM_destroy();
-
-
 
 #endif

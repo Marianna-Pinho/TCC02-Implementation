@@ -110,7 +110,7 @@ int DB_saveADSBInfo(adsbMsg *msg){
     status = sqlite3_exec(db_handler, sqlText, NULL, NULL, &errmsg); //It tries to execute the sql statement
     
     if(status ==  SQLITE_OK){
-        //()printf("Data was saved successfully!\n");
+        //printf("Data was saved successfully!\n");
         LOG_add("DB_saveADSBInfo", "Data was saved successfully");
     }else{
         //()printf("Data couldn't be saved: %s\n", errmsg);
@@ -168,7 +168,7 @@ int DB_saveAirline(adsbMsg *msg){
     status = sqlite3_exec(db_handler, sqlText, NULL, NULL, &errmsg); //It tries to execute the sql statement
 
     if(status ==  SQLITE_OK){
-        printf("Data was saved successfully!\n");
+        //printf("Data was saved successfully!\n");
         LOG_add("DB_saveAirline", "Data was saved successfully");
     }else{
         printf("Data couldn't be saved: %s\n", errmsg);
@@ -285,6 +285,8 @@ static int DB_callback(void *data, int nCols, char** fields, char** colNames){
     (*node)->oeMSG[1][strlen(fields[14])] = '\0';
     strcpy((*node)->messageVEL, fields[15]);
     (*node)->messageVEL[strlen(fields[15])] = '\0';
+
+    (*node)->next = NULL;
 
    return 0;
 }

@@ -318,7 +318,8 @@ to be sent to the server.
 ================================================*/
 void *NET_addBuffer(void *msg){
     
-    sem_wait(&semaphore);
+    sem_wait(&semaphore); 
+
     adsbMsg *node = (adsbMsg*) msg;
     
     if(sendList == NULL){
@@ -335,7 +336,10 @@ void *NET_addBuffer(void *msg){
         sendList = LIST_insert2(sendList, node);
         count_size++;
     }
-        
+
+    free(node); //To clear the bytes allocated in the database callback function
+    node = NULL;
+
     sem_post(&semaphore);
 }
 
