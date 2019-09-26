@@ -169,13 +169,17 @@ an URL and an adsbMsg node and tries to send the
 information contained in the node to the url, through
 a post request.
 ================================================*/
-int CURL_post(CURL *handler, char *url, adsbMsg *message){
+int CURL_post(CURL *handler, char *url){
 	
     CURLcode returnCode;
-	char *jsonMsg;
+	char *jsonMsg = (char *)malloc(sizeof(char));
+    jsonMsg[0] = '\0';
 
     //It transforms an adsbMsg node in a json string
-	CURL_serialize(message, &jsonMsg);
+	//CURL_serialize(message, &jsonMsg);
+
+    //It transforms all the nodes in sendList in a json string
+    jsonMsg = NET_readBuffer(jsonMsg);
 
     //It adapts the message to the format the server expects, that is, a list
 	char listFormat[strlen(jsonMsg) + 3];			
@@ -250,6 +254,14 @@ void* NET_dataUpload(){
             NET_putMsg();
             timeCount = 0;
 		}
+        if((timeCount % POST_WAIT) == 0){
+            
+            if(sendList != NULL){
+                printf("Sending message to the server... %d\n", timeCount);
+                NET_postMsg();
+            }
+            
+        }
 
         usleep(1000);
         timeCount += 1;
@@ -264,8 +276,8 @@ DESCRIPTION: this function receives an adsbMsg node
 and tries to send its information to the path
 specified by POST_URL.
 ================================================*/
-void* NET_postMsg(void *node){             
-    adsbMsg *msg = (adsbMsg*) node;
+void* NET_postMsg(){             
+    
     CURL *handler = NULL;  
 
     CURL_init(&handler);
@@ -275,11 +287,10 @@ void* NET_postMsg(void *node){
 
     }else{
         printf("NET: handler initialized\n");
-        CURL_post(handler, POST_URL, msg);   
+        CURL_post(handler, POST_URL);   
     }
     
-    free(msg); //To clear the bytes allocated in the database callback function
-    pthread_exit(NULL); 
+    //pthread_exit(NULL); 
 }
 
 /*==============================================
@@ -322,7 +333,7 @@ void *NET_addBuffer(void *msg){
 
     adsbMsg* node = (adsbMsg*) msg;
     
-    if(count_size >= TAM_BUFFER){
+    if(count_size >= BUFFER_SIZE){
         adsbMsg* aux = sendList;
         sendList = sendList->next;
         free(aux);
@@ -332,7 +343,7 @@ void *NET_addBuffer(void *msg){
     sendList = LIST_insert2(sendList, node);
     count_size++;
     
-    free(node);
+    free(node); //Free the node created by the callback function
     node = NULL;
 
     sem_post(&semaphore);
@@ -356,10 +367,11 @@ char *NET_readBuffer(char *finalJson){
     char *auxJson = NULL;
 
     while(auxMsg != NULL){
-      
+        
         CURL_serialize(auxMsg, &auxJson);
 
         int oldSize = strlen(finalJson);
+        
         finalJson = (char *)realloc(finalJson,(oldSize + strlen(auxJson))*sizeof(char) + 2);
         
         if(oldSize != 0){
@@ -369,9 +381,11 @@ char *NET_readBuffer(char *finalJson){
         strcat(&finalJson[strlen(finalJson)], auxJson);
         finalJson[strlen(finalJson)] = '\0';
 
-        free(aux2);
+        
         auxMsg = auxMsg->next;
+        free(aux2);
         aux2 = auxMsg;
+        free(auxJson);
     }
     
     sendList = NULL;

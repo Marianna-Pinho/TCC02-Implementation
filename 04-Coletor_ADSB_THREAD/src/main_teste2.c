@@ -85,12 +85,6 @@
 //                     }else{
                    
 //                         NET_addBuffer((void *)nodePost);
-                       
-//                         // int postMsg = pthread_create(&thread, NULL, NET_postMsg, (void *)nodePost);				//Se a mensagem já contiver os dados suficientes, ela será enviada.
-//                         // if (postMsg){
-//                         //     printf("ERROR; return code from pthread_create() is %d\n", postMsg);
-//                         //     exit(-1);
-//                         // }
 
 //                         clearMinimalInfo(node);
 //                     }
