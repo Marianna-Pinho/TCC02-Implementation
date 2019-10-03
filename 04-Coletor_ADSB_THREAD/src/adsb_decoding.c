@@ -181,7 +181,7 @@ data isn't about position or returns 1, if the
 data is about position.
 ================================================*/
 int isPositionMessage(char *msgi){
-	if((getTypecode(msgi)<5)||(getTypecode(msgi)>18)){
+	if((getTypecode(msgi)<9)||(getTypecode(msgi)>18)){ //changed from 5 to 9
 		//printf("It's not a Position Message\n");
 		return 0;
 	}else{
@@ -336,7 +336,7 @@ int getAirbornePosition(char *msgEVEN, char *msgODD, double timeE, double timeO,
 		*lon = (360.0/(double)ni) * (getMOD(m,ni) + lonCPR_even);	//It gets the final longitude
 		*lat = latEven;		//It gets the final latitude
 	
-	}else if(timeO > timeE){
+	}else{
 		ni = getLarger(1,getCprNL(latOdd) - 1);
 		m = floor(lonCPR_even*(getCprNL(latOdd)-1) - lonCPR_odd*getCprNL(latOdd) + 0.5);
 
@@ -505,7 +505,7 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 						return NULL;
 					}
 
-					alt = getAltitude(buffer); //It gets the altitude
+					alt = getAltitude(no->oeMSG[0]); //changed from buffer to no->oeMSG[0] //It gets the altitude
 					if(alt < 0){
 						//()printf("ADS-B Decoding Error: altitude couldn't be decoded!\n");
 						LOG_add("decodeMessage", "altitude couldn't be decoded");

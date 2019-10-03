@@ -495,7 +495,7 @@
 //     teste1->verticalVelocity = -2880;
 //     teste1->horizontalVelocity = 460.508423;
 //     teste1->groundTrackHeading = 354.017029;
-//     teste1->oeTimestamp[teste1->lastTime] = 619987240;
+//     teste1->oeTimestamp[teste1->lastTime] = getCurrentTime();
 //     strcpy(teste1->messageID, "8DE491A120501373E39C603B0D55");
 //     teste1->messageID[strlen(teste1->messageID)] = '\0';
 //     strcpy(teste1->oeMSG[0], "8DE491A1587570D2112DC1359251");
@@ -513,7 +513,7 @@
 //     teste2->verticalVelocity = -2880;
 //     teste2->horizontalVelocity = 460.508423;
 //     teste2->groundTrackHeading = 354.017029;
-//     teste2->oeTimestamp[teste2->lastTime] = 619987240;
+//     teste2->oeTimestamp[teste2->lastTime] = getCurrentTime();
 //     strcpy(teste2->messageID, "8DE491A120501373E39C603B0D55");
 //     teste2->messageID[strlen(teste2->messageID)] = '\0';
 //     strcpy(teste2->oeMSG[0], "8DE491A1587570D2112DC1359251");
@@ -529,9 +529,9 @@
 //     teste3->Longitude = -39.116211;
 //     teste3->Altitude = 22300;
 //     teste3->verticalVelocity = -2880;
-//     teste3->horizontalVelocity = 460.508423;
+//     teste3->horizontalVelocity = 360.508423;
 //     teste3->groundTrackHeading = 354.017029;
-//     teste3->oeTimestamp[teste3->lastTime] = 619987240;
+//     teste3->oeTimestamp[teste3->lastTime] = getCurrentTime();
 //     strcpy(teste3->messageID, "8DE491A120501373E39C603B0D55");
 //     teste3->messageID[strlen(teste3->messageID)] = '\0';
 //     strcpy(teste3->oeMSG[0], "8DE491A1587570D2112DC1359251");
@@ -551,9 +551,10 @@
 //     SEM_init();
 //     pthread_t t1,t2;
 //     pthread_create(&t2,NULL,NET_addBuffer,(void*)teste1);
+//     pthread_join(t2,NULL);
 //     NET_addBuffer((void *)teste2);
 //     NET_addBuffer((void *)teste3);
-//     pthread_join(t2,NULL);
+    
 
 //    //jsonFinal =  NET_readBuffer(jsonFinal);
 //    //printf("JsonFinal:\n%s\n%p\n", jsonFinal,jsonFinal);
