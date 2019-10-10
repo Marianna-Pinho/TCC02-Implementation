@@ -41,13 +41,8 @@ int main(){
     adsbMsg *nodePost = NULL;
 
     signal(2, suddenStop);
-
-    FILE *p = fopen("src/teste01_Todas.txt", "r");
-
-    if(p == NULL){
-        printf("File don't found\n");
-        
-    }
+    //Starting Serial
+    serialPort = SERIAL_start();
 
     //Starting Timer
     TIMER_setSignalHandler(timerHandler, SIG);
@@ -58,16 +53,17 @@ int main(){
     SEM_init();
 
     pthread_t thread;
-    
-    //This thread sends a hello to the server
+
+    //This thread sends a hello to the server and sends the messages of the list
     int sendHello = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
     if (sendHello){
 	 	printf("ERROR; return code from pthread_create() is %d\n", sendHello);
  		exit(-1);
  	}
 
-    while(fscanf(p," %s", buffer) != EOF){   //Polling method
-        buffer[strlen(buffer)] = '\0'; 
+    while(1){   //Polling method
+
+        SERIAL_communicate(&serialPort, buffer);
 
         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
         if(CRC_tryMsg(buffer, &syndrome)){
@@ -83,7 +79,7 @@ int main(){
                     if(DB_readData(&nodePost) != 0){
                         printf("We coudn't read the aircraft information\n");
                     }else{
-
+                   
                         NET_addBuffer((void *)nodePost);
 
                         clearMinimalInfo(node);
@@ -105,7 +101,7 @@ int main(){
             timer_flag = 0;
         }
 
-        usleep(1000000); //0.001s
+        usleep(1000); //Wait 1 ms
     }
     return 0;
 }
