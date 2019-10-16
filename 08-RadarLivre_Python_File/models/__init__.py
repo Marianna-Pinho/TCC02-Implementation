@@ -140,10 +140,10 @@ class ADSBInfo(Model):
                     horizontalVelocity=velocity[0],
                     groundTrackHeading=velocity[1],
                     verticalVelocity=velocity[2],
-                    messagDataId=messageBuffer.dataId[0].frame[1:29],
-                    messagDataPositionEven=messageBuffer.dataId[0].frame[1:29],
-                    messagDataPositionOdd=messageBuffer.dataId[0].frame[1:29],
-                    messagDataVelocity=messageBuffer.dataId[0].frame[1:29],
+                    messageDataId=messageBuffer.dataId[0].frame[1:29],
+                    messageDataPositionEven=messageBuffer.dataPositionEven[0].frame[1:29],
+                    messageDataPositionOdd=messageBuffer.dataPositionOdd[0].frame[1:29],
+                    messageDataVelocity=messageBuffer.dataVelocity[0].frame[1:29],
                     timestamp=int(systemTimestamp() * 1000),
                     timestampSent=int(systemTimestamp() * 1000)
                 )
