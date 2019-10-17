@@ -1,0 +1,1024 @@
+Sending hello to the server... 0
+NET: handler initialized
+URL: www.radarlivre.com:80/api/collector/5980d171-73fb-46c1-aea1-e7b5d5c1de60/
+""============== Node : ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.861217
+Longitude: -39.086135
+Altitude: 23525
+HV: 425.553772
+VV: -1664
+Update: 1570013043.000000
+Even: 8DE48413587B80C185302045A811
+Odd: 8DE48413587B54D02F67D43CA55A
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407333686C3C261DB3
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.861217
+Longitude: -39.086135
+Altitude: 23525
+HV: 425.553772
+VV: -1664
+Update: 1570013043.000000
+Even: 8DE48413587B80C185302045A811
+Odd: 8DE48413587B54D02F67D43CA55A
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407333686C3C261DB3
+
+
+Sending message to the server... 3500
+Sending message to the server... 4000
+============== Node : ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.853676
+Longitude: -39.084052
+Altitude: 23350
+HV: 419.237396
+VV: -1856
+Update: 1570013044.000000
+Even: 8DE484135879E0C45930829562EB
+Odd: 8DE48413587B14D173680085B509
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407132A8783B4C37A7
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.853676
+Longitude: -39.084052
+Altitude: 23350
+HV: 419.237396
+VV: -1856
+Update: 1570013045.000000
+Even: 8DE484135879E0C45930829562EB
+Odd: 8DE48413587B14D173680085B509
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407132A8783B4C37A7
+
+
+Sending message to the server... 4500
+Sending message to the server... 5000
+============== Node : ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.827209
+Longitude: -39.076740
+Altitude: 22975
+HV: 418.273834
+VV: -1920
+Update: 1570013046.000000
+Even: 8DE484135877F0C8293107260A01
+Odd: 8DE48413587984D3B5684EC21A33
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407132887C3B317D8E
+
+
+Sending message to the server... 5500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48413
+CallSign: GLO1526
+Latitude: -4.827209
+Longitude: -39.076740
+Altitude: 22975
+HV: 418.273834
+VV: -1920
+Update: 1570013046.000000
+Even: 8DE484135877F0C8293107260A01
+Odd: 8DE48413587984D3B5684EC21A33
+Id: 8DE48413201CC3F1D72DA0C33D4C
+Vel: 8DE4841399407132887C3B317D8E
+
+
+Sending message to the server... 6000
+Sending message to the server... 6500
+Sending message to the server... 7000
+Sending message to the server... 7500
+Sending message to the server... 8000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.911913
+Longitude: -39.033714
+Altitude: 25275
+HV: 470.744080
+VV: -2816
+Update: 1570013049.000000
+Even: 8DE48A6F5883C0B95734999F06F5
+Odd: 8DE48A6F5883B4C7AD6C27FF6C62
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406539A8B44305211E
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.911913
+Longitude: -39.033714
+Altitude: 25275
+HV: 470.744080
+VV: -2816
+Update: 1570013049.000000
+Even: 8DE48A6F5883C0B95734999F06F5
+Odd: 8DE48A6F5883B4C7AD6C27FF6C62
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406539A8B44305211E
+
+
+Sending message to the server... 8500
+Sending message to the server... 9000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.900880
+Longitude: -39.031346
+Altitude: 25025
+HV: 467.600250
+VV: -2816
+Update: 1570013050.000000
+Even: 8DE48A6F588320BB3B34CD84A9E3
+Odd: 8DE48A6F588314C9876C598E373A
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940643948B442DC5F0F
+
+
+Sending message to the server... 9500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.900880
+Longitude: -39.031346
+Altitude: 25025
+HV: 467.600250
+VV: -2816
+Update: 1570013050.000000
+Even: 8DE48A6F588320BB3B34CD84A9E3
+Odd: 8DE48A6F588314C9876C598E373A
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940643948B442DC5F0F
+
+
+Sending message to the server... 10000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.891988
+Longitude: -39.029404
+Altitude: 24700
+HV: 464.456665
+VV: -2816
+Update: 1570013051.000000
+Even: 8DE48A6F588140BE41351FDB4D93
+Odd: 8DE48A6F588194CB056C82BCB791
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338E8B443AE1ABB
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.891988
+Longitude: -39.029404
+Altitude: 24700
+HV: 464.456665
+VV: -2816
+Update: 1570013051.000000
+Even: 8DE48A6F588140BE41351FDB4D93
+Odd: 8DE48A6F588194CB056C82BCB791
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338E8B443AE1ABB
+
+
+Sending message to the server... 10500
+Sending message to the server... 11000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.881468
+Longitude: -39.027131
+Altitude: 24625
+HV: 462.501892
+VV: -2880
+Update: 1570013052.000000
+Even: 8DE48A6F588120BE893526885C29
+Odd: 8DE48A6F588114CCC96CB22DF8BA
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338A8B8436CB8E9
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.881468
+Longitude: -39.027131
+Altitude: 24625
+HV: 462.501892
+VV: -2880
+Update: 1570013052.000000
+Even: 8DE48A6F588120BE893526885C29
+Odd: 8DE48A6F588114CCC96CB22DF8BA
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338A8B8436CB8E9
+
+
+Sending message to the server... 11500
+Sending message to the server... 12000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.874771
+Longitude: -39.025719
+Altitude: 24500
+HV: 462.501892
+VV: -2880
+Update: 1570013054.000000
+Even: 8DE48A6F587FC0C00B354F8288F4
+Odd: 8DE48A6F587FD4CD7D6CC5417B6A
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338A8B8416CA4F2
+
+
+Sending message to the server... 12500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.874771
+Longitude: -39.025719
+Altitude: 24500
+HV: 462.501892
+VV: -2880
+Update: 1570013054.000000
+Even: 8DE48A6F587FC0C00B354F8288F4
+Odd: 8DE48A6F587FD4CD7D6CC5417B6A
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406338A8B8416CA4F2
+
+
+Sending message to the server... 13000
+Sending message to the server... 13500
+Sending message to the server... 14000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.866850
+Longitude: -39.024006
+Altitude: 24275
+HV: 459.358246
+VV: -2880
+Update: 1570013055.000000
+Even: 8DE48A6F587F30C1D3357F929B81
+Odd: 8DE48A6F587F54CF3D6CF4183FF6
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940623848B840B5DAE3
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.866850
+Longitude: -39.024006
+Altitude: 24275
+HV: 459.358246
+VV: -2880
+Update: 1570013056.000000
+Even: 8DE48A6F587F30C1D3357F929B81
+Odd: 8DE48A6F587F54CF3D6CF4183FF6
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940623848B840B5DAE3
+
+
+Sending message to the server... 14500
+Sending message to the server... 15000
+Sending message to the server... 15500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.853536
+Longitude: -39.021117
+Altitude: 24000
+HV: 458.380859
+VV: -2816
+Update: 1570013057.000000
+Even: 8DE48A6F587D80C40735BBA619E7
+Odd: 8DE48A6F587DA4D1796D314B676B
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940623828B43FCF06D8
+
+
+Sending message to the server... 16000
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.853536
+Longitude: -39.021117
+Altitude: 24000
+HV: 458.380859
+VV: -2816
+Update: 1570013058.000000
+Even: 8DE48A6F587D80C40735BBA619E7
+Odd: 8DE48A6F587DA4D1796D314B676B
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940623828B43FCF06D8
+
+
+Sending message to the server... 16500
+Sending message to the server... 17000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.845250
+Longitude: -39.019365
+Altitude: 23825
+HV: 455.237305
+VV: -2752
+Update: 1570013059.000000
+Even: 8DE48A6F587D70C44F35C3A94470
+Odd: 8DE48A6F587D14D2DD6D5679BDC3
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406137C8B040594134
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.845250
+Longitude: -39.019365
+Altitude: 23825
+HV: 455.237305
+VV: -2752
+Update: 1570013059.000000
+Even: 8DE48A6F587D70C44F35C3A94470
+Odd: 8DE48A6F587D14D2DD6D5679BDC3
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406137C8B040594134
+
+
+Sending message to the server... 17500
+Sending message to the server... 18000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.841107
+Longitude: -39.018465
+Altitude: 23750
+HV: 454.259827
+VV: -2816
+Update: 1570013060.000000
+Even: 8DE48A6F587D00C56F35E1555E01
+Odd: 8DE48A6F587BE4D38F6D6937C8AE
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406137A8B43F53F10F
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.841107
+Longitude: -39.018465
+Altitude: 23750
+HV: 454.259827
+VV: -2816
+Update: 1570013060.000000
+Even: 8DE48A6F587D00C56F35E1555E01
+Odd: 8DE48A6F587BE4D38F6D6937C8AE
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406137A8B43F53F10F
+
+
+Sending message to the server... 18500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.836591
+Longitude: -39.017518
+Altitude: 23675
+HV: 453.282471
+VV: -2752
+Update: 1570013061.000000
+Even: 8DE48A6F587BC0C62335F48396B3
+Odd: 8DE48A6F587BB4D4516D7DE91EF8
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940613788B03F2EBB26
+
+
+Sending message to the server... 19000
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.836591
+Longitude: -39.017518
+Altitude: 23675
+HV: 453.282471
+VV: -2752
+Update: 1570013061.000000
+Even: 8DE48A6F587BC0C62335F48396B3
+Odd: 8DE48A6F587BB4D4516D7DE91EF8
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940613788B03F2EBB26
+
+
+Sending message to the server... 19500
+Sending message to the server... 20000
+Sending message to the server... 20500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.828766
+Longitude: -39.015803
+Altitude: 23500
+HV: 451.116394
+VV: -2752
+Update: 1570013063.000000
+Even: 8DE48A6F587B40C7E53624888E68
+Odd: 8DE48A6F587B64D5496D980301F5
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940603748B03EB2B91E
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.828766
+Longitude: -39.015803
+Altitude: 23500
+HV: 451.116394
+VV: -2752
+Update: 1570013063.000000
+Even: 8DE48A6F587B40C7E53624888E68
+Odd: 8DE48A6F587B64D5496D980301F5
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F9940603748B03EB2B91E
+
+
+Sending message to the server... 21000
+Sending message to the server... 21500
+Sending message to the server... 22000
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.822207
+Longitude: -39.014393
+Altitude: 23275
+HV: 450.138855
+VV: -2752
+Update: 1570013064.000000
+Even: 8DE48A6F5879B0C9C736578F6C26
+Odd: 8DE48A6F5879F4D6BB6DBF3DFC14
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99C0603728B03EECFA1A
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.822207
+Longitude: -39.014393
+Altitude: 23275
+HV: 450.138855
+VV: -2752
+Update: 1570013065.000000
+Even: 8DE48A6F5879B0C9C736578F6C26
+Odd: 8DE48A6F5879F4D6BB6DBF3DFC14
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99C0603728B03EECFA1A
+
+
+Sending message to the server... 22500
+Sending message to the server... 23000
+Sending message to the server... 23500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.792134
+Longitude: -39.007905
+Altitude: 22750
+HV: 448.184113
+VV: -2624
+Update: 1570013066.000000
+Even: 8DE48A6F587980CA8B366C8F2CBB
+Odd: 8DE48A6F587764DBC76E4898ACBB
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99C06036E8A83BC88389
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.792134
+Longitude: -39.007905
+Altitude: 22750
+HV: 448.184113
+VV: -2624
+Update: 1570013066.000000
+Even: 8DE48A6F587980CA8B366C8F2CBB
+Odd: 8DE48A6F587764DBC76E4898ACBB
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99C06036E8A83BC88389
+
+
+Sending message to the server... 24000
+Sending message to the server... 24500
+Sending message to the server... 25000
+Sending message to the server... 25500
+Sending message to the server... 26000
+Sending message to the server... 26500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.774863
+Longitude: -39.004164
+Altitude: 21525
+HV: 456.426331
+VV: -2688
+Update: 1570013069.000000
+Even: 8DE48A6F587150D80D37DB8874CC
+Odd: 8DE48A6F587584DEAD6E97912E01
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406237E8AC394C8622
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.774863
+Longitude: -39.004164
+Altitude: 21525
+HV: 456.426331
+VV: -2688
+Update: 1570013070.000000
+Even: 8DE48A6F587150D80D37DB8874CC
+Odd: 8DE48A6F587584DEAD6E97912E01
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406237E8AC394C8622
+
+
+Sending message to the server... 27000
+Sending message to the server... 27500
+============== Node : ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.725403
+Longitude: -38.993504
+Altitude: 21350
+HV: 455.449219
+VV: -2688
+Update: 1570013071.000000
+Even: 8DE48A6F586FE0D9893803CE0A20
+Odd: 8DE48A6F587104E6A16F6F0D569F
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406237C8AC3909FA0B
+
+
+Sending message to the server... 28000
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48A6F
+CallSign: ONE6271
+Latitude: -4.725403
+Longitude: -38.993504
+Altitude: 21350
+HV: 455.449219
+VV: -2688
+Update: 1570013071.000000
+Even: 8DE48A6F586FE0D9893803CE0A20
+Odd: 8DE48A6F587104E6A16F6F0D569F
+Id: 8DE48A6F203CE176CB7C60A6876E
+Vel: 8DE48A6F99406237C8AC3909FA0B
+
+
+Sending message to the server... 28500
+Sending message to the server... 29000
+Sending message to the server... 29500
+Sending message to the server... 30000
+Sending message to the server... 30500
+Sending message to the server... 31000
+Sending message to the server... 31500
+Sending message to the server... 32000
+Sending message to the server... 32500
+============== Node : ==============
+
+ICAO: E48501
+CallSign: GOL2180
+Latitude: -4.896240
+Longitude: -39.050531
+Altitude: 24425
+HV: 415.249329
+VV: -2240
+Update: 1570013076.000000
+Even: 8DE48501587F90BC61333A8DAC12
+Odd: 8DE48501588104C8BB6A95307F35
+Id: 8DE48501201CF332C78C20347B3D
+Vel: 8DE4850199406132A8903A7FCD78
+
+
+Sending message to the server... 33000
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48501
+CallSign: GOL2180
+Latitude: -4.896240
+Longitude: -39.050531
+Altitude: 24425
+HV: 415.249329
+VV: -2240
+Update: 1570013076.000000
+Even: 8DE48501587F90BC61333A8DAC12
+Odd: 8DE48501588104C8BB6A95307F35
+Id: 8DE48501201CF332C78C20347B3D
+Vel: 8DE4850199406132A8903A7FCD78
+
+
+Sending message to the server... 33500
+============== Node : ==============
+
+ICAO: E48501
+CallSign: GOL2180
+Latitude: -4.894363
+Longitude: -39.050098
+Altitude: 24200
+HV: 414.276489
+VV: -2240
+Update: 1570013077.000000
+Even: 8DE48501587F00BE8D337AEF99E7
+Odd: 8DE48501587F84CA9F6ACD2B69D5
+Id: 8DE48501201CF332C78C20347B3D
+Vel: 8DE485019940613288903BC54558
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E48501
+CallSign: GOL2180
+Latitude: -4.894363
+Longitude: -39.050098
+Altitude: 24200
+HV: 414.276489
+VV: -2240
+Update: 1570013077.000000
+Even: 8DE48501587F00BE8D337AEF99E7
+Odd: 8DE48501587F84CA9F6ACD2B69D5
+Id: 8DE48501201CF332C78C20347B3D
+Vel: 8DE485019940613288903BC54558
+
+
+Sending message to the server... 34000
+Sending message to the server... 34500
+Sending message to the server... 35000
+Sending message to the server... 35500
+Sending message to the server... 36000
+Sending message to the server... 36500
+Sending message to the server... 37000
+Sending message to the server... 37500
+Sending message to the server... 38000
+Sending message to the server... 38500
+Sending message to the server... 39000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.841665
+Longitude: -39.108108
+Altitude: 23925
+HV: 458.519348
+VV: -2816
+Update: 1570013083.000000
+Even: 8DE491A1587D70C5432E6B57E030
+Odd: 8DE491A1587D54D3776604233BBE
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313928B43B2AD485
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.841665
+Longitude: -39.108108
+Altitude: 23925
+HV: 458.519348
+VV: -2816
+Update: 1570013083.000000
+Even: 8DE491A1587D70C5432E6B57E030
+Odd: 8DE491A1587D54D3776604233BBE
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313928B43B2AD485
+
+
+Sending message to the server... 39500
+Sending message to the server... 40000
+Sending message to the server... 40500
+Sending message to the server... 41000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.806379
+Longitude: -39.111849
+Altitude: 23125
+HV: 464.591217
+VV: -3008
+Update: 1570013085.000000
+Even: 8DE491A1587950CC272E1093C561
+Odd: 8DE491A1587974D96365B59F2626
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143239E8C03A2AE13A
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.806379
+Longitude: -39.111849
+Altitude: 23125
+HV: 464.591217
+VV: -3008
+Update: 1570013086.000000
+Even: 8DE491A1587950CC272E1093C561
+Odd: 8DE491A1587974D96365B59F2626
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143239E8C03A2AE13A
+
+
+Sending message to the server... 41500
+Sending message to the server... 42000
+Sending message to the server... 42500
+Sending message to the server... 43000
+Sending message to the server... 43500
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.793437
+Longitude: -39.113175
+Altitude: 22850
+HV: 463.596802
+VV: -2944
+Update: 1570013088.000000
+Even: 8DE491A15877D0CD472E0065E75B
+Odd: 8DE491A15877A4DB8F659955821A
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143239C8BC3B7A2701
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.793437
+Longitude: -39.113175
+Altitude: 22850
+HV: 463.596802
+VV: -2944
+Update: 1570013089.000000
+Even: 8DE491A15877D0CD472E0065E75B
+Odd: 8DE491A15877A4DB8F659955821A
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143239C8BC3B7A2701
+
+
+Sending message to the server... 44000
+Sending message to the server... 44500
+Sending message to the server... 45000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.777749
+Longitude: -39.114880
+Altitude: 22550
+HV: 462.497559
+VV: -2560
+Update: 1570013090.000000
+Even: 8DE491A1587730CF712DE448CFAD
+Odd: 8DE491A15875E4DE31657533EAF8
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143139A8A438DFE03A
+
+
+Sending message to the server... 45500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.777749
+Longitude: -39.114880
+Altitude: 22550
+HV: 462.497559
+VV: -2560
+Update: 1570013090.000000
+Even: 8DE491A1587730CF712DE448CFAD
+Odd: 8DE491A15875E4DE31657533EAF8
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143139A8A438DFE03A
+
+
+Sending message to the server... 46000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.771558
+Longitude: -39.115495
+Altitude: 22425
+HV: 461.502991
+VV: -2752
+Update: 1570013091.000000
+Even: 8DE491A15875A0D1552DCB7CDCEC
+Odd: 8DE491A1587594DF3B656801070A
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313988B037BDD25B
+
+
+Sending message to the server... 46500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.771558
+Longitude: -39.115495
+Altitude: 22425
+HV: 461.502991
+VV: -2752
+Update: 1570013092.000000
+Even: 8DE491A15875A0D1552DCB7CDCEC
+Odd: 8DE491A1587594DF3B656801070A
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313988B037BDD25B
+
+
+Sending message to the server... 47000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.764389
+Longitude: -39.116206
+Altitude: 22300
+HV: 460.508423
+VV: -2880
+Update: 1570013092.000000
+Even: 8DE491A1587570D2112DC1359251
+Odd: 8DE491A1587544E06F65595BF018
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313968B837E83E8D
+
+
+Sending message to the server... 47500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.764389
+Longitude: -39.116206
+Altitude: 22300
+HV: 460.508423
+VV: -2880
+Update: 1570013093.000000
+Even: 8DE491A1587570D2112DC1359251
+Odd: 8DE491A1587544E06F65595BF018
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313968B837E83E8D
+
+
+Sending message to the server... 48000
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.760106
+Longitude: -39.116679
+Altitude: 22200
+HV: 460.508423
+VV: -2752
+Update: 1570013094.000000
+Even: 8DE491A1587520D34B2DB1CC64A2
+Odd: 8DE491A1587504E127654F562064
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313968B03667A684
+
+
+Sending message to the server... 48500
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.760106
+Longitude: -39.116679
+Altitude: 22200
+HV: 460.508423
+VV: -2752
+Update: 1570013094.000000
+Even: 8DE491A1587520D34B2DB1CC64A2
+Odd: 8DE491A1587504E127654F562064
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A19914313968B03667A684
+
+
+Sending message to the server... 49000
+Sending message to the server... 49500
+============== Node : ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.755637
+Longitude: -39.117153
+Altitude: 22075
+HV: 458.519348
+VV: -2432
+Update: 1570013095.000000
+Even: 8DE491A15873B0D4CF2D9E4855D4
+Odd: 8DE491A15873D4E1E7654580F4F2
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143139289C3764B4D6
+
+
+Data was read successfully!
+============== Node Post: ==============
+
+ICAO: E491A1
+CallSign: TAM3891
+Latitude: -4.755637
+Longitude: -39.117153
+Altitude: 22075
+HV: 458.519348
+VV: -2432
+Update: 1570013095.000000
+Even: 8DE491A15873B0D4CF2D9E4855D4
+Odd: 8DE491A15873D4E1E7654580F4F2
+Id: 8DE491A120501373E39C603B0D55
+Vel: 8DE491A199143139289C3764B4D6
+
+
+Sending message to the server... 50000
+Sending message to the server... 50500
+Sending message to the server... 51000
+Sending message to the server... 51500
