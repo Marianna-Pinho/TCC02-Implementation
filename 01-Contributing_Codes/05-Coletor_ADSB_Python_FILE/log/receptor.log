@@ -1,0 +1,319 @@
+2019-10-29 13:06:46,767 - receptor - INFO - Starting receptor...
+2019-10-29 13:06:46,768 - receptor - INFO - Uploader started!
+2019-10-29 13:06:46,775 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-10-29 13:06:47,777 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-10-29 13:06:48,778 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-10-29 13:06:49,780 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-10-29 13:06:50,781 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-10-29 13:06:51,783 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-10-29 13:06:52,784 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-10-29 13:06:53,785 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-10-29 13:06:54,786 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-10-29 13:06:55,668 - receptor - INFO - Stopping receptor...
+2019-10-29 13:06:55,669 - receptor - INFO - Uploader stoped!
+2019-11-12 09:37:45,150 - receptor - INFO - Starting receptor...
+2019-11-12 09:37:45,150 - receptor - INFO - Uploader started!
+2019-11-12 09:37:45,158 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-12 09:37:46,160 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-12 09:37:47,161 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-12 09:37:48,163 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-12 09:37:49,164 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-11-12 09:37:50,166 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-11-12 09:37:51,168 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-11-12 09:37:52,169 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-11-12 09:37:53,172 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-11-12 09:37:54,173 - receptor - INFO - Raw Message Received: *8DE4841399407333686C3C261DB3;
+2019-11-12 09:37:55,175 - receptor - INFO - Raw Message Received: *8DE48413587B80C185302045A811;
+2019-11-12 09:37:56,177 - receptor - INFO - Raw Message Received: *8DE48413587B74CFAD67C260B143;
+2019-11-12 09:37:57,178 - receptor - INFO - Raw Message Received: *8DE48413587B64CFEF67CB3EC916;
+2019-11-12 09:37:58,180 - receptor - INFO - Raw Message Received: *8DE48413587B54D02F67D43CA55A;
+2019-11-12 09:37:59,181 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 09:37:59,181 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:37:59,398 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:38:00,399 - receptor - INFO - Raw Message Received: *8DE4841399407232E8703BB3BCA7;
+2019-11-12 09:38:00,929 - receptor - INFO - Stopping receptor...
+2019-11-12 09:38:00,930 - receptor - INFO - Uploader stoped!
+2019-11-12 09:38:54,568 - receptor - INFO - Starting receptor...
+2019-11-12 09:38:54,570 - receptor - INFO - Uploader started!
+2019-11-12 09:38:54,570 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-12 09:38:55,575 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-12 09:38:56,577 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-12 09:38:57,578 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-12 09:38:58,580 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-11-12 09:38:59,581 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-11-12 09:39:00,582 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-11-12 09:39:01,583 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-11-12 09:39:02,584 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-11-12 09:39:03,585 - receptor - INFO - Raw Message Received: *8DE4841399407333686C3C261DB3;
+2019-11-12 09:39:12,987 - receptor - INFO - Starting receptor...
+2019-11-12 09:39:12,989 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-12 09:39:12,989 - receptor - INFO - Uploader started!
+2019-11-12 09:39:13,991 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-12 09:39:14,992 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-12 09:39:15,993 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-12 09:39:16,996 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-11-12 09:39:17,997 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-11-12 09:39:18,998 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-11-12 09:39:20,000 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-11-12 09:39:21,001 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-11-12 09:39:22,013 - receptor - INFO - Raw Message Received: *8DE4841399407333686C3C261DB3;
+2019-11-12 09:39:23,015 - receptor - INFO - Raw Message Received: *8DE48413587B80C185302045A811;
+2019-11-12 09:39:24,017 - receptor - INFO - Raw Message Received: *8DE48413587B74CFAD67C260B143;
+2019-11-12 09:39:25,018 - receptor - INFO - Raw Message Received: *8DE48413587B64CFEF67CB3EC916;
+2019-11-12 09:39:26,020 - receptor - INFO - Raw Message Received: *8DE48413587B54D02F67D43CA55A;
+2019-11-12 09:39:27,021 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 09:39:27,022 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:39:27,170 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:39:28,171 - receptor - INFO - Raw Message Received: *8DE4841399407232E8703BB3BCA7;
+2019-11-12 09:39:29,172 - receptor - INFO - Raw Message Received: *8DE4841399407132A8743CFBBD83;
+2019-11-12 09:39:30,173 - receptor - INFO - Raw Message Received: *8DE48413587B14D173680085B509;
+2019-11-12 09:39:31,175 - receptor - INFO - Raw Message Received: *8DE4841399407132A8783B4C37A7;
+2019-11-12 09:39:32,176 - receptor - INFO - Raw Message Received: *8DE484135879E0C45930829562EB;
+2019-11-12 09:39:32,176 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:39:32,325 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:39:33,326 - receptor - INFO - Raw Message Received: *8DE4841399407132887C3B317D8E;
+2019-11-12 09:39:34,329 - receptor - INFO - Raw Message Received: *8DE484135879D4D275682386FA7C;
+2019-11-12 09:39:35,330 - receptor - INFO - Raw Message Received: *8DE48413587984D3B5684EC21A33;
+2019-11-12 09:39:36,333 - receptor - INFO - Raw Message Received: *8DE484135877F0C8293107260A01;
+2019-11-12 09:39:36,333 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:39:36,469 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:39:37,470 - receptor - INFO - Raw Message Received: *8DE4841399406F31E884398B4E10;
+2019-11-12 09:39:38,472 - receptor - INFO - Raw Message Received: *8DE484135877D0C8C9311D625FB8;
+2019-11-12 09:39:39,473 - receptor - INFO - Raw Message Received: *8DE48413586F10D7F7332F2A2231;
+2019-11-12 09:39:40,474 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 09:39:40,513 - receptor - INFO - Stopping receptor...
+2019-11-12 09:39:40,517 - receptor - INFO - Uploader stoped!
+2019-11-12 09:41:33,913 - receptor - INFO - Starting receptor...
+2019-11-12 09:41:33,915 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-12 09:41:33,916 - receptor - INFO - Uploader started!
+2019-11-12 09:41:34,917 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-12 09:41:35,918 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-12 09:41:36,920 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-12 09:41:37,921 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-11-12 09:41:38,922 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-11-12 09:41:39,923 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-11-12 09:41:40,925 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-11-12 09:41:41,926 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-11-12 09:41:42,928 - receptor - INFO - Raw Message Received: *8DE4841399407333686C3C261DB3;
+2019-11-12 09:41:43,929 - receptor - INFO - Raw Message Received: *8DE48413587B80C185302045A811;
+2019-11-12 09:41:44,931 - receptor - INFO - Raw Message Received: *8DE48413587B74CFAD67C260B143;
+2019-11-12 09:41:45,932 - receptor - INFO - Raw Message Received: *8DE48413587B64CFEF67CB3EC916;
+2019-11-12 09:41:46,933 - receptor - INFO - Raw Message Received: *8DE48413587B54D02F67D43CA55A;
+2019-11-12 09:41:47,934 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 09:41:47,935 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:41:48,052 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:41:49,053 - receptor - INFO - Raw Message Received: *8DE4841399407232E8703BB3BCA7;
+2019-11-12 09:41:50,055 - receptor - INFO - Raw Message Received: *8DE4841399407132A8743CFBBD83;
+2019-11-12 09:41:51,056 - receptor - INFO - Raw Message Received: *8DE48413587B14D173680085B509;
+2019-11-12 09:41:52,057 - receptor - INFO - Raw Message Received: *8DE4841399407132A8783B4C37A7;
+2019-11-12 09:41:53,058 - receptor - INFO - Raw Message Received: *8DE484135879E0C45930829562EB;
+2019-11-12 09:41:53,059 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:41:53,194 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:41:56,785 - receptor - INFO - Raw Message Received: *8DE4841399407132887C3B317D8E;
+2019-11-12 09:41:57,786 - receptor - INFO - Raw Message Received: *8DE484135879D4D275682386FA7C;
+2019-11-12 09:41:58,788 - receptor - INFO - Raw Message Received: *8DE48413587984D3B5684EC21A33;
+2019-11-12 09:41:59,789 - receptor - INFO - Raw Message Received: *8DE484135877F0C8293107260A01;
+2019-11-12 09:41:59,790 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 09:41:59,895 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-12 09:42:00,896 - receptor - INFO - Raw Message Received: *8DE4841399406F31E884398B4E10;
+2019-11-12 09:42:01,898 - receptor - INFO - Raw Message Received: *8DE484135877D0C8C9311D625FB8;
+2019-11-12 09:42:02,898 - receptor - INFO - Raw Message Received: *8DE48413586F10D7F7332F2A2231;
+2019-11-12 09:42:03,900 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 09:42:04,901 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-12 09:42:05,902 - receptor - INFO - Raw Message Received: *8DE48A6F9940653A08B445D67A42;
+2019-11-12 09:42:06,904 - receptor - INFO - Raw Message Received: *8DE48A6F5885D0B5B134366E97D7;
+2019-11-12 09:42:07,905 - receptor - INFO - Raw Message Received: *8DE48A6F9940653A08B444298E4B;
+2019-11-12 09:42:08,906 - receptor - INFO - Raw Message Received: *8DE48A6F99406539A8B44305211E;
+2019-11-12 09:42:09,907 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-12 09:42:10,909 - receptor - INFO - Raw Message Received: *8DE48A6F5883C0B95734999F06F5;
+2019-11-12 09:42:11,771 - receptor - INFO - Stopping receptor...
+2019-11-12 09:42:11,772 - receptor - INFO - Uploader stoped!
+2019-11-12 10:52:29,660 - receptor - INFO - Raw Message Received: *8DE48413587B80C185302045A811;
+2019-11-12 10:52:30,661 - receptor - INFO - Raw Message Received: *8DE48413587B74CFAD67C260B143;
+2019-11-12 10:52:31,662 - receptor - INFO - Raw Message Received: *8DE48413587B64CFEF67CB3EC916;
+2019-11-12 10:52:32,664 - receptor - INFO - Raw Message Received: *8DE48413587B54D02F67D43CA55A;
+2019-11-12 10:52:33,665 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-12 10:52:33,665 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-12 10:52:34,316 - receptor - ERROR - Receptor open: [Errno 5] Input/output error
+2019-11-12 10:52:34,317 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-12 10:52:35,318 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-12 10:52:36,320 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-12 10:52:37,324 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-17 22:22:51,168 - receptor - INFO - Starting receptor...
+2019-11-17 22:22:51,186 - receptor - INFO - Uploader started!
+2019-11-17 22:22:51,187 - receptor - INFO - Raw Message Received: *8B305678CA11029549568A9AC051;
+2019-11-17 22:22:52,188 - receptor - INFO - Raw Message Received: *8F824A887D0A647AD30658469026;
+2019-11-17 22:22:53,189 - receptor - INFO - Raw Message Received: *8D8982DA0FAA7A81D65154E03662;
+2019-11-17 22:22:54,191 - receptor - INFO - Raw Message Received: *8C146819E6F0E65929939A005068;
+2019-11-17 22:22:55,192 - receptor - INFO - Raw Message Received: *8DE484139940763488BC3EBA1207;
+2019-11-17 22:22:56,193 - receptor - INFO - Raw Message Received: *8DE48413587DE0BA732F28AADD2D;
+2019-11-17 22:22:57,194 - receptor - INFO - Raw Message Received: *8DE48413587D40BD9F2F9818B12F;
+2019-11-17 22:22:58,196 - receptor - INFO - Raw Message Received: *8DE484139940743388683C329F0F;
+2019-11-17 22:22:59,198 - receptor - INFO - Raw Message Received: *8DE48413587BF0BF512FD38459B8;
+2019-11-17 22:23:00,199 - receptor - INFO - Raw Message Received: *8DE4841399407333686C3C261DB3;
+2019-11-17 22:23:01,200 - receptor - INFO - Raw Message Received: *8DE48413587B80C185302045A811;
+2019-11-17 22:23:02,202 - receptor - INFO - Raw Message Received: *8DE48413587B74CFAD67C260B143;
+2019-11-17 22:23:03,203 - receptor - INFO - Raw Message Received: *8DE48413587B64CFEF67CB3EC916;
+2019-11-17 22:23:04,205 - receptor - INFO - Raw Message Received: *8DE48413587B54D02F67D43CA55A;
+2019-11-17 22:23:05,206 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-17 22:23:05,207 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:05,425 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:06,426 - receptor - INFO - Raw Message Received: *8DE4841399407232E8703BB3BCA7;
+2019-11-17 22:23:07,427 - receptor - INFO - Raw Message Received: *8DE4841399407132A8743CFBBD83;
+2019-11-17 22:23:08,429 - receptor - INFO - Raw Message Received: *8DE48413587B14D173680085B509;
+2019-11-17 22:23:09,430 - receptor - INFO - Raw Message Received: *8DE4841399407132A8783B4C37A7;
+2019-11-17 22:23:10,431 - receptor - INFO - Raw Message Received: *8DE484135879E0C45930829562EB;
+2019-11-17 22:23:10,431 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:10,613 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:11,615 - receptor - INFO - Raw Message Received: *8DE4841399407132887C3B317D8E;
+2019-11-17 22:23:12,618 - receptor - INFO - Raw Message Received: *8DE484135879D4D275682386FA7C;
+2019-11-17 22:23:13,619 - receptor - INFO - Raw Message Received: *8DE48413587984D3B5684EC21A33;
+2019-11-17 22:23:14,620 - receptor - INFO - Raw Message Received: *8DE484135877F0C8293107260A01;
+2019-11-17 22:23:14,621 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48413, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:14,724 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48413, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:15,725 - receptor - INFO - Raw Message Received: *8DE4841399406F31E884398B4E10;
+2019-11-17 22:23:16,726 - receptor - INFO - Raw Message Received: *8DE484135877D0C8C9311D625FB8;
+2019-11-17 22:23:17,728 - receptor - INFO - Raw Message Received: *8DE48413586F10D7F7332F2A2231;
+2019-11-17 22:23:18,729 - receptor - INFO - Raw Message Received: *8DE48413201CC3F1D72DA0C33D4C;
+2019-11-17 22:23:19,730 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:23:20,732 - receptor - INFO - Raw Message Received: *8DE48A6F9940653A08B445D67A42;
+2019-11-17 22:23:21,733 - receptor - INFO - Raw Message Received: *8DE48A6F5885D0B5B134366E97D7;
+2019-11-17 22:23:22,735 - receptor - INFO - Raw Message Received: *8DE48A6F9940653A08B444298E4B;
+2019-11-17 22:23:23,736 - receptor - INFO - Raw Message Received: *8DE48A6F99406539A8B44305211E;
+2019-11-17 22:23:24,738 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:23:25,738 - receptor - INFO - Raw Message Received: *8DE48A6F5883C0B95734999F06F5;
+2019-11-17 22:23:26,740 - receptor - INFO - Raw Message Received: *8DE48A6F5883B4C7AD6C27FF6C62;
+2019-11-17 22:23:26,740 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:26,843 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:27,844 - receptor - INFO - Raw Message Received: *8DE48A6F9940643948B442DC5F0F;
+2019-11-17 22:23:28,846 - receptor - INFO - Raw Message Received: *8DE48A6F9940643948B442DC5F0F;
+2019-11-17 22:23:29,847 - receptor - INFO - Raw Message Received: *8DE48A6F588320BB3B34CD84A9E3;
+2019-11-17 22:23:30,849 - receptor - INFO - Raw Message Received: *8DE48A6F588314C9876C598E373A;
+2019-11-17 22:23:30,849 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:30,993 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:31,995 - receptor - INFO - Raw Message Received: *8DE48A6F99406338E8B443AE1ABB;
+2019-11-17 22:23:32,996 - receptor - INFO - Raw Message Received: *8DE48A6F588194CB056C82BCB791;
+2019-11-17 22:23:33,997 - receptor - INFO - Raw Message Received: *8DE48A6F588140BE41351FDB4D93;
+2019-11-17 22:23:33,998 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:34,128 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:35,129 - receptor - INFO - Raw Message Received: *8DE48A6F99406338A8B8436CB8E9;
+2019-11-17 22:23:36,131 - receptor - INFO - Raw Message Received: *8DE48A6F588120BE893526885C29;
+2019-11-17 22:23:37,131 - receptor - INFO - Raw Message Received: *8DE48A6F588114CCC96CB22DF8BA;
+2019-11-17 22:23:37,131 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:37,271 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:38,273 - receptor - INFO - Raw Message Received: *8DE48A6F99406338A8B44324E2E9;
+2019-11-17 22:23:39,274 - receptor - INFO - Raw Message Received: *8DE48A6F587FF4CD116CB9B4BF8F;
+2019-11-17 22:23:40,276 - receptor - INFO - Raw Message Received: *8DE48A6F99406338A8B8416CA4F2;
+2019-11-17 22:23:41,276 - receptor - INFO - Raw Message Received: *8DE48A6F587FD4CD7D6CC5417B6A;
+2019-11-17 22:23:42,278 - receptor - INFO - Raw Message Received: *8DE48A6F587FC0C00B354F8288F4;
+2019-11-17 22:23:42,278 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:42,384 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:43,385 - receptor - INFO - Raw Message Received: *8DE48A6F587F84CE8B6CE11AA739;
+2019-11-17 22:23:44,387 - receptor - INFO - Raw Message Received: *8DE48A6F9940623868B840F0A6CA;
+2019-11-17 22:23:45,388 - receptor - INFO - Raw Message Received: *8DE48A6F9940623868B440B8FCCA;
+2019-11-17 22:23:46,389 - receptor - INFO - Raw Message Received: *8DE48A6F587F54CF3D6CF4183FF6;
+2019-11-17 22:23:47,389 - receptor - INFO - Raw Message Received: *8DE48A6F9940623848B840B5DAE3;
+2019-11-17 22:23:48,391 - receptor - INFO - Raw Message Received: *8DE48A6F587F30C1D3357F929B81;
+2019-11-17 22:23:48,391 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:48,520 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:49,522 - receptor - INFO - Raw Message Received: *8DE48A6F9940623828B8407A5E98;
+2019-11-17 22:23:50,522 - receptor - INFO - Raw Message Received: *8DE48A6F9940623828B83F875CD8;
+2019-11-17 22:23:51,524 - receptor - INFO - Raw Message Received: *8DE48A6F587F14D0036D0938DFD9;
+2019-11-17 22:23:52,525 - receptor - INFO - Raw Message Received: *8DE48A6F9940623828B43FCF06D8;
+2019-11-17 22:23:53,526 - receptor - INFO - Raw Message Received: *8DE48A6F587DA4C1796D314B676B;
+2019-11-17 22:23:54,528 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:23:55,529 - receptor - INFO - Raw Message Received: *8DE48A6F587D80C40735BBA619E7;
+2019-11-17 22:23:55,529 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:23:55,639 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:23:56,641 - receptor - INFO - Raw Message Received: *8DE48A6F587D70C44F35C3A94470;
+2019-11-17 22:23:57,642 - receptor - INFO - Raw Message Received: *8DE48A6F99406137E8B440240B1D;
+2019-11-17 22:23:58,644 - receptor - INFO - Raw Message Received: *8DE48A6F99406137E8B440240B1D;
+2019-11-17 22:23:59,645 - receptor - INFO - Raw Message Received: *8DE48A6F99406137C8B040594134;
+2019-11-17 22:24:00,647 - receptor - INFO - Raw Message Received: *8DE48A6F587D14D2DD6D5679BDC3;
+2019-11-17 22:24:00,647 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:00,785 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:01,787 - receptor - INFO - Raw Message Received: *8DE48A6F587D00C56F35E1555E01;
+2019-11-17 22:24:02,788 - receptor - INFO - Raw Message Received: *8DE48A6F587BE4D38F6D6937C8AE;
+2019-11-17 22:24:03,790 - receptor - INFO - Raw Message Received: *8DE48A6F99406137A8B43F53F10F;
+2019-11-17 22:24:03,790 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:03,894 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:04,896 - receptor - INFO - Raw Message Received: *8DE48A6F587BC0C62335F48396B3;
+2019-11-17 22:24:05,897 - receptor - INFO - Raw Message Received: *8DE48A6F587BB4D4516D7DE91EF8;
+2019-11-17 22:24:06,899 - receptor - INFO - Raw Message Received: *8DE48A6F9940613788B03F2EBB26;
+2019-11-17 22:24:06,899 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:07,061 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:08,063 - receptor - INFO - Raw Message Received: *8DE48A6F587B94D4996D8583CD6B;
+2019-11-17 22:24:09,064 - receptor - INFO - Raw Message Received: *8DE48A6F9940613768B03F0B3BF0;
+2019-11-17 22:24:10,066 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:24:11,067 - receptor - INFO - Raw Message Received: *8DE48A6F587B64D5496D980301F5;
+2019-11-17 22:24:12,068 - receptor - INFO - Raw Message Received: *8DE48A6F9940603768B03F08313E;
+2019-11-17 22:24:13,069 - receptor - INFO - Raw Message Received: *8DE48A6F9940603748B03EB2B91E;
+2019-11-17 22:24:14,071 - receptor - INFO - Raw Message Received: *8DE48A6F587B40C7E53624888E68;
+2019-11-17 22:24:14,072 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:14,174 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:15,176 - receptor - INFO - Raw Message Received: *8DE48A6F9940603748B03EB2B91E;
+2019-11-17 22:24:16,177 - receptor - INFO - Raw Message Received: *8DE48A6F9940603748B03EB2B91E;
+2019-11-17 22:24:17,179 - receptor - INFO - Raw Message Received: *8DE48A6F5879F4D6BB6DBF3DFC14;
+2019-11-17 22:24:18,180 - receptor - INFO - Raw Message Received: *8DE48A6F99C0603728B03EECFA1A;
+2019-11-17 22:24:19,182 - receptor - INFO - Raw Message Received: *8DE48A6F5879B0C9C736578F6C26;
+2019-11-17 22:24:19,182 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:19,307 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:20,308 - receptor - INFO - Raw Message Received: *8DE48A6F587980CA8B366C8F2CBB;
+2019-11-17 22:24:21,310 - receptor - INFO - Raw Message Received: *8DE48A6F99C05F36E8B03EE76C8C;
+2019-11-17 22:24:22,311 - receptor - INFO - Raw Message Received: *8DE48A6F99C05F36C8B03D5DF8B7;
+2019-11-17 22:24:23,312 - receptor - INFO - Raw Message Received: *8DE48A6F99C06036E8A83BC88389;
+2019-11-17 22:24:24,313 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:24:25,315 - receptor - INFO - Raw Message Received: *8DE48A6F587764DBC76E4898ACBB;
+2019-11-17 22:24:25,315 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:25,451 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:26,452 - receptor - INFO - Raw Message Received: *8DE48A6F99C0613748B83C5004B4;
+2019-11-17 22:24:27,454 - receptor - INFO - Raw Message Received: *8DE48A6F99C0613768BC3C2D4E9D;
+2019-11-17 22:24:28,455 - receptor - INFO - Raw Message Received: *8DE48A6F5875F4DD396E6F7BAA49;
+2019-11-17 22:24:29,456 - receptor - INFO - Raw Message Received: *8DE48A6F9940613788C03C73472F;
+2019-11-17 22:24:30,458 - receptor - INFO - Raw Message Received: *8DE48A6F5875E4DD816E76A8FC88;
+2019-11-17 22:24:31,459 - receptor - INFO - Raw Message Received: *8DE48A6F99406137A8B43AAC3D30;
+2019-11-17 22:24:32,460 - receptor - INFO - Raw Message Received: *8DE48A6F99406137C8AC3AF30D4B;
+2019-11-17 22:24:33,462 - receptor - INFO - Raw Message Received: *8DE48A6F99406137C8AC390CE559;
+2019-11-17 22:24:34,463 - receptor - INFO - Raw Message Received: *8DE48A6F587584DEAD6E97912E01;
+2019-11-17 22:24:35,464 - receptor - INFO - Raw Message Received: *8DE48A6F99406237E8A4393CEA22;
+2019-11-17 22:24:36,466 - receptor - INFO - Raw Message Received: *8DE48A6F99406237E8AC394C8622;
+2019-11-17 22:24:37,467 - receptor - INFO - Raw Message Received: *8DE48A6F587150D80D37DB8874CC;
+2019-11-17 22:24:37,468 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:37,586 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:38,587 - receptor - INFO - Raw Message Received: *8DE48A6F203CE176CB7C60A6876E;
+2019-11-17 22:24:39,587 - receptor - INFO - Raw Message Received: *8DE48A6F99406237C8AC3909FA0B;
+2019-11-17 22:24:40,588 - receptor - INFO - Raw Message Received: *8DE48A6F587104E6A16F6F0D569F;
+2019-11-17 22:24:41,590 - receptor - INFO - Raw Message Received: *8DE48A6F99406237C8AC3909FA0B;
+2019-11-17 22:24:42,591 - receptor - INFO - Raw Message Received: *8DE48A6F586FE0D9893803CE0A20;
+2019-11-17 22:24:42,591 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48A6F, di=1, do=1, de=1, dv=1]
+2019-11-17 22:24:42,763 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48A6F, di=1, do=0, de=0, dv=0]
+2019-11-17 22:24:43,765 - receptor - INFO - Raw Message Received: *8DE48A6F99406237C8AC3909FA0B;
+2019-11-17 22:24:44,766 - receptor - INFO - Raw Message Received: *8DE48A6F99406137A8AC39C36122;
+2019-11-17 22:24:45,768 - receptor - INFO - Raw Message Received: *8DE48A6F586F90DA85381E87E4F2;
+2019-11-17 22:24:46,769 - receptor - INFO - Raw Message Received: *8DE48A6F9940613788AC39861D0B;
+2019-11-17 22:24:47,770 - receptor - INFO - Raw Message Received: *8DE48A6F586F80DB03382BA4A53D;
+2019-11-17 22:24:48,771 - receptor - INFO - Raw Message Received: *8DE485019940693348943E09BECB;
+2019-11-17 22:24:49,771 - receptor - INFO - Raw Message Received: *8DE48501589370B58F3270E7F6CD;
+2019-11-17 22:24:50,772 - receptor - INFO - Raw Message Received: *8DE485019940613328903D41E4A2;
+2019-11-17 22:24:51,774 - receptor - INFO - Raw Message Received: *8DE485015881F0B75D32A5829E65;
+2019-11-17 22:24:52,775 - receptor - INFO - Raw Message Received: *8DE485015881B0B84532C07DA93A;
+2019-11-17 22:24:53,776 - receptor - INFO - Raw Message Received: *8DE485019940613308943B3C8AA6;
+2019-11-17 22:24:54,778 - receptor - INFO - Raw Message Received: *8DE4850199406132E8903CF51107;
+2019-11-17 22:24:55,779 - receptor - INFO - Raw Message Received: *8DE4850199406132C8903B4FBD0A;
+2019-11-17 22:24:56,781 - receptor - INFO - Raw Message Received: *8DE48501588110BA7533015CDD45;
+2019-11-17 22:24:57,782 - receptor - INFO - Raw Message Received: *8DE48501588104C8BB6A95307F35;
+2019-11-17 22:24:58,783 - receptor - INFO - Raw Message Received: *8DE4850199406132C8903B4FBD0A;
+2019-11-17 22:24:59,785 - receptor - INFO - Raw Message Received: *8DE48501587FF0BB193314804379;
+2019-11-17 22:25:00,786 - receptor - INFO - Raw Message Received: *8DE4850199406132A8903A7FCD78;
+2019-11-17 22:25:01,787 - receptor - INFO - Raw Message Received: *8DE4850199406132A8903A7FCD78;
+2019-11-17 22:25:02,789 - receptor - INFO - Raw Message Received: *8DE48501587F90BC61333A8DAC12;
+2019-11-17 22:25:03,789 - receptor - INFO - Raw Message Received: *8DE48501201CF332C78C20347B3D;
+2019-11-17 22:25:03,790 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48501, di=1, do=1, de=1, dv=1]
+2019-11-17 22:25:03,944 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48501, di=1, do=0, de=0, dv=0]
+2019-11-17 22:25:04,946 - receptor - INFO - Raw Message Received: *8DE48501587F84CA9F6ACD2B69D5;
+2019-11-17 22:25:05,947 - receptor - INFO - Raw Message Received: *8DE485019940613288903BC54558;
+2019-11-17 22:25:06,950 - receptor - INFO - Raw Message Received: *8DE48501587F00BE8D337AEF99E7;
+2019-11-17 22:25:06,951 - receptor - INFO - Complete Message Received: MsgBuff: [ic=E48501, di=1, do=1, de=1, dv=1]
+2019-11-17 22:25:07,087 - receptor - INFO - Processed Complete Message: MsgBuff: [ic=E48501, di=1, do=0, de=0, dv=0]
+2019-11-17 22:25:07,647 - receptor - INFO - Stopping receptor...
+2019-11-17 22:25:07,649 - receptor - INFO - Uploader stoped!

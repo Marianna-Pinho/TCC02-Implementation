@@ -39,7 +39,7 @@ class DataUploader(Thread):
 
         timeCount = 0
         while self.__running:
-
+            #print("Hello " + str(timeCount) + "\n")
             if timeCount % self.sendHelloInterval == 0:
                 self.__sendHelloToServer()
 

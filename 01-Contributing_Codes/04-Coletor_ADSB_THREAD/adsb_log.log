@@ -5904,3 +5904,28 @@ Thu Oct  3 10:51:05 2019 | DB_saveADSBInfo | Data was saved successfully
 Thu Oct  3 10:51:05 2019 | DB_saveAirline | Data was saved successfully
 Thu Oct  3 10:51:05 2019 | DB_readData | Data was read successfully
 Thu Oct  3 10:51:10 2019 | suddenStop | Collector was closed
+Tue Oct 29 13:05:52 2019 | DB_saveADSBInfo | Data was saved successfully
+Tue Oct 29 13:05:53 2019 | DB_saveAirline | Data was saved successfully
+Tue Oct 29 13:05:53 2019 | DB_readData | Data was read successfully
+Tue Oct 29 13:05:56 2019 | suddenStop | Collector was closed
+Tue Oct 29 13:06:12 2019 | suddenStop | Collector was closed
+Thu Nov  7 18:46:38 2019 | DB_saveADSBInfo | Data was saved successfully
+Thu Nov  7 18:46:38 2019 | DB_saveAirline | Data was saved successfully
+Thu Nov  7 18:46:38 2019 | DB_readData | Data was read successfully
+Thu Nov  7 18:46:43 2019 | DB_saveADSBInfo | Data was saved successfully
+Thu Nov  7 18:46:43 2019 | DB_saveAirline | Data was saved successfully
+Thu Nov  7 18:46:43 2019 | DB_readData | Data was read successfully
+Thu Nov  7 18:46:47 2019 | DB_saveADSBInfo | Data was saved successfully
+Thu Nov  7 18:46:47 2019 | DB_saveAirline | Data was saved successfully
+Thu Nov  7 18:46:47 2019 | DB_readData | Data was read successfully
+Thu Nov  7 18:46:54 2019 | suddenStop | Collector was closed
+Mon Nov 18 09:35:23 2019 | DB_saveADSBInfo | Data was saved successfully
+Mon Nov 18 09:35:23 2019 | DB_saveAirline | Data was saved successfully
+Mon Nov 18 09:35:23 2019 | DB_readData | Data was read successfully
+Mon Nov 18 09:35:28 2019 | DB_saveADSBInfo | Data was saved successfully
+Mon Nov 18 09:35:28 2019 | DB_saveAirline | Data was saved successfully
+Mon Nov 18 09:35:28 2019 | DB_readData | Data was read successfully
+Mon Nov 18 09:35:33 2019 | DB_saveADSBInfo | Data was saved successfully
+Mon Nov 18 09:35:33 2019 | DB_saveAirline | Data was saved successfully
+Mon Nov 18 09:35:33 2019 | DB_readData | Data was read successfully
+Mon Nov 18 09:35:43 2019 | suddenStop | Collector was closed
