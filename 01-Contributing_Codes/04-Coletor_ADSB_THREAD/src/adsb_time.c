@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <time.h>
+#include <sys/time.h>
 #include <stdlib.h>
 #include <errno.h>
 #include "adsb_time.h"
@@ -15,18 +16,29 @@ and returns it in seconds.
 ================================================*/
 double getCurrentTime(){
   time_t timer;
-  struct tm time_aux;
-  double seconds;
-
-//   time_aux.tm_hour = 0;   time_aux.tm_min = 0; time_aux.tm_sec = 0;  time_aux.tm_wday = 6; time_aux.tm_isdst = 0;
-//   time_aux.tm_year = 100; time_aux.tm_mon = 0; time_aux.tm_mday = 1; time_aux.tm_yday = 0;
-
+  
   time(&timer); //This gives us the time since January 1, 1970 and in seconds.
   
   return timer;
-//   seconds = difftime(timer,mktime(&time_aux));
+}
 
-//   return seconds;
+/*==============================================
+FUNCTION: getCurrentTimeMilli
+INPUT: void
+OUTPUT: a time_t value
+DESCRIPTION: this function gets the current time
+and returns it in milliseconds.
+================================================*/
+time_t getCurrentTimeMilli(){
+  struct timeval currentTime;
+
+  if(gettimeofday(&currentTime,NULL)){
+    printf("It was not possible to get the time.\n");
+  }else{
+    return currentTime.tv_sec*1000 + currentTime.tv_usec/1000.0;
+  }
+
+  return 0;
 }
 
 /*==============================================
