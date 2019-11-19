@@ -4,6 +4,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <sys/time.h>
 #include "adsb_time.h"
 
 /*==============================================
@@ -27,6 +28,25 @@ double getCurrentTime(){
 //   seconds = difftime(timer,mktime(&time_aux));
 
 //   return seconds;
+}
+
+/*==============================================
+FUNCTION: getCurrentTimeMilli
+INPUT: void
+OUTPUT: a time_t value
+DESCRIPTION: this function gets the current time
+and returns it in milliseconds.
+================================================*/
+time_t getCurrentTimeMilli(){
+  struct timeval currentTime;
+
+  if(gettimeofday(&currentTime,NULL)){
+    printf("It was not possible to get the time.\n");
+  }else{
+    return currentTime.tv_sec*1000 + currentTime.tv_usec/1000.0;
+  }
+
+  return 0;
 }
 
 /*==============================================

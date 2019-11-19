@@ -18,6 +18,7 @@ operations.
 #define TIMER_OK    0
 
 double getCurrentTime();
+time_t getCurrentTimeMilli();
 char* getFormatedTime();
 int TIMER_setSignalHandler(void (*handler)(int, siginfo_t*, void*), int timer_signal);
 timer_t TIMER_create(int clockid, int timer_signal);

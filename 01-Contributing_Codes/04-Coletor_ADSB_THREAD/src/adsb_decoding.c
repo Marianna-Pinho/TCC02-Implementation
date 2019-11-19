@@ -7,6 +7,7 @@
 #include "adsb_lists.h"
 #include "adsb_time.h"
 #include "adsb_createLog.h"
+#include "adsb_systemStats.h"
 
 /*===========================
 Functions used in identication
@@ -452,7 +453,7 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 	if((getDownlinkFormat(buffer) == 17) && (strlen(buffer) == 28)){ //It verifies if the message received is of ADS-B type
 		//()printf("\n\n***********ADSB MESSAGE*************\n");
 		//()printf("MESSAGE:%s\n", buffer);
-
+		saveReceivedMessage(buffer, ADSB_MSG_FILE);
 //Catching ICAO
 		getICAO(buffer, icao);
 		
@@ -477,6 +478,8 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 //Catching the Callsign
 		if((1 <= getTypecode(buffer)) && (getTypecode(buffer) <= 4)){
 
+			saveReceivedMessage(buffer, DECODED_MSG_FILE);
+
 			if(getCallsign(buffer, no->callsign) < 0){
 				//()printf("ADS-B Decoding Error: callsign couldn't be decoded!\n");
 				LOG_add("decodeMessage", "callsign couldn't be decoded");
@@ -496,6 +499,8 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 		else if(isPositionMessage(buffer)){
 
 			no = setPosition(buffer, no);
+
+			saveReceivedMessage(buffer, DECODED_MSG_FILE);
 			
 			if((strlen(no->oeMSG[0]) != 0) && (strlen(no->oeMSG[1]) != 0)){ //It verifies if there is both messages (even and odd)
 					if(getAirbornePosition(no->oeMSG[0], no->oeMSG[1], no->oeTimestamp[0], no->oeTimestamp[1], &lat, &lon) < 0){  //It gets the latitude and longitude
@@ -526,6 +531,7 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 //Catching the velocity
 		else if(getTypecode(buffer) == 19){
 		
+			saveReceivedMessage(buffer, DECODED_MSG_FILE);
 			if(getVelocities(buffer, &vel_h, &heading, &rateV, tag) < 0){
 				//()printf("ADS-B Decoding Error: velocities couldn't be decoded!\n");
 				LOG_add("decodeMessage", "velocities couldn't be decoded");
@@ -544,6 +550,8 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 			//()printf("|VELH: %f\n|HEAD: %f\n|RATEV: %d\n|TAG: %s\n",no->horizontalVelocity, no->groundTrackHeading, no->verticalVelocity,tag); 
 			//()printf("-------------------------------------------------------------------------------\n");
 
+		}else{
+			saveReceivedMessage(buffer, NOT_DECODED_ADSB_MSG_FILE);
 		}
 	
 		//It reorders the messages list according with the update time

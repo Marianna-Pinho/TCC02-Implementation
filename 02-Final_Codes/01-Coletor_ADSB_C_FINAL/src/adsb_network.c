@@ -248,6 +248,7 @@ void* NET_dataUpload(){
 	int timeCount = 0;
 
 	while(1){
+        printf("TimeCount:%d\n", timeCount);
 		if((timeCount % PUT_WAIT) == 0){
             printf("Sending hello to the server... %d\n", timeCount);
 			
@@ -263,7 +264,7 @@ void* NET_dataUpload(){
             
         }
 
-        usleep(1000);
+        usleep(900);
         timeCount += 1;
 	}
 }
