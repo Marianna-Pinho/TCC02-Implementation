@@ -80,7 +80,7 @@ void CURL_serialize(adsbMsg *msg, char **jsonMsg){
     //This converts the json object to a string
    	*jsonMsg = (char *)json_object_to_json_string(json);
     
-    printf("JSON: %s\n", *jsonMsg);
+    //printf("JSON: %s\n", *jsonMsg);
 }
 
 /*==============================================
@@ -134,7 +134,7 @@ int CURL_put(CURL *handler, char *url, char *info){
 	sprintf(path,"%s%s",url, info);
 
 	path[strlen(path)] = '\0';
-	printf("URL: %s\n", path);
+	//printf("URL: %s\n", path);
 
 	//Setting header configuration
 	struct curl_slist *headers = NULL;
@@ -211,7 +211,7 @@ int CURL_post(CURL *handler, char *url){
 	//Freeing json string here, instead of using "json_object_put(json)" in serializer, because we were missing the jsonMsg information.
 	free(jsonMsg);
 
-    printf("\nPost done!%d\n", returnCode);
+    //printf("\nPost done!%d\n", returnCode);
 
     return returnCode;
 }
@@ -248,23 +248,28 @@ void* NET_dataUpload(){
 	int timeCount = 0;
 
 	while(1){
-        printf("TimeCount:%d\n", timeCount);
+        //printf("TimeCount:%d\n", timeCount);
+        if(sendList != NULL){
+            printf("Sending message to the server... %d\n", timeCount);
+            NET_postMsg();
+        }
+        
 		if((timeCount % PUT_WAIT) == 0){
             printf("Sending hello to the server... %d\n", timeCount);
 			
             NET_putMsg();
             timeCount = 0;
 		}
-        if((timeCount % POST_WAIT) == 0){
+        // if((timeCount % POST_WAIT) == 0){
             
-            if(sendList != NULL){
-                printf("Sending message to the server... %d\n", timeCount);
-                NET_postMsg();
-            }
+        //     if(sendList != NULL){
+        //         printf("Sending message to the server... %d\n", timeCount);
+        //         NET_postMsg();
+        //     }
             
-        }
+        // }
 
-        usleep(900);
+        usleep(450000);//900
         timeCount += 1;
 	}
 }

@@ -464,7 +464,8 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 		}else{ //Essa parte do código precisa de uma atenção especial, porque pode estar falha
 			if((no = LIST_insert(icao, messages, &LastNode)) == NULL){ //It tries to insert a new node
 				if((no = LIST_find(icao, messages)) == NULL){
-					perror("ICAO not found");	
+					//perror("ICAO not found");
+					LOG_add("adsb_decoding","ICAO couldn't be found");	
 					return messages;
 					
 				}					

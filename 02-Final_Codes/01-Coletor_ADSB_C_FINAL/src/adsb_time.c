@@ -37,13 +37,13 @@ OUTPUT: a time_t value
 DESCRIPTION: this function gets the current time
 and returns it in milliseconds.
 ================================================*/
-time_t getCurrentTimeMilli(){
+long long int getCurrentTimeMilli(){
   struct timeval currentTime;
 
   if(gettimeofday(&currentTime,NULL)){
     printf("It was not possible to get the time.\n");
   }else{
-    return currentTime.tv_sec*1000 + currentTime.tv_usec/1000.0;
+    return (long long int) currentTime.tv_sec*1000 + currentTime.tv_usec/1000.0;
   }
 
   return 0;

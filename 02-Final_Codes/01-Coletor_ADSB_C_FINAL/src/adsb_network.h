@@ -14,7 +14,8 @@ with a remote server.
 #define POST_URL    "www.radarlivre.com:80/api/adsb_info/"
 #define COLLECTOR_URL   "5980d171-73fb-46c1-aea1-e7b5d5c1de60/"
 
-#define PUT_WAIT 60000
+//60000
+#define PUT_WAIT 120
 #define POST_WAIT 500
 
 #define BUFFER_SIZE 2048

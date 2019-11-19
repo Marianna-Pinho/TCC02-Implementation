@@ -62,13 +62,15 @@ int main(){
     //This thread sends a hello to the server and sends the messages of the list
     int sendHello = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
     if (sendHello){
-	 	printf("ERROR; return code from pthread_create() is %d\n", sendHello);
+	 	//printf("ERROR; return code from pthread_create() is %d\n", sendHello);
+        LOG_add("adsb_collector","Send hello thread could not be created");
  		exit(-1);
  	}
 
     int readStats = pthread_create(&thread_stats, NULL, saveSystemStats, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
     if (readStats){
-	 	printf("ERROR; return code from pthread_create() is %d\n", readStats);
+	 	//printf("ERROR; return code from pthread_create() is %d\n", readStats);
+        LOG_add("adsb_collector","read Stats thread could not be created");
  		exit(-1);
  	}
 
@@ -98,7 +100,8 @@ int main(){
                     //()printf("Aircraft %s information saved succesfully!\n", node->ICAO);
 
                     if(DB_readData(&nodePost) != 0){
-                        printf("We coudn't read the aircraft information\n");
+                        //printf("We coudn't read the aircraft information\n");
+                        LOG_add("adsb_collector","We coudn't read the aircraft information");
                     }else{
                    
                         NET_addBuffer((void *)nodePost);

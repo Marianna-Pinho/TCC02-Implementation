@@ -158,7 +158,7 @@ int DB_saveAirline(adsbMsg *msg){
     );
 
     if(sqlText == NULL){
-        printf("SQLITE query couldn't be created!\n");
+        //printf("SQLITE query couldn't be created!\n");
         LOG_add("DB_saveAirline", "SQLITE query couldn't be create");
         DB_close(&db_handler, &errmsg, &sqlText);
         sqlite3_shutdown();
@@ -171,7 +171,7 @@ int DB_saveAirline(adsbMsg *msg){
         //printf("Data was saved successfully!\n");
         LOG_add("DB_saveAirline", "Data was saved successfully");
     }else{
-        printf("Data couldn't be saved: %s\n", errmsg);
+        //printf("Data couldn't be saved: %s\n", errmsg);
         LOG_add("DB_saveAirline", "Data couldn't be saved");
     }
 
@@ -324,10 +324,10 @@ int DB_readData(adsbMsg **node){
     status = sqlite3_exec(db_handler, sqlText, DB_callback, node, &errmsg); //It tries to execute the sql statement
     
     if(status ==  SQLITE_OK){
-        printf("Data was read successfully!\n");
+        //printf("Data was read successfully!\n");
         LOG_add("DB_readData", "Data was read successfully");
     }else{
-        printf("Data couldn't be read: %s\n", errmsg);
+        //printf("Data couldn't be read: %s\n", errmsg);
         LOG_add("DB_readData", "Data couldn't be read");
     }
 

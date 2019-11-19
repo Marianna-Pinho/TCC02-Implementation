@@ -62,7 +62,7 @@ adsbMsg *LIST_insert(char *ICAO, adsbMsg* list, adsbMsg**LastNode){
 
 	for(aux1 = list; aux1 != NULL; aux1 = aux1->next){	
 		if(strcmp(aux1->ICAO, ICAO) == 0){
-			perror("ICAO already exists!");
+			//perror("ICAO already exists!");
 			return NULL; 						//ICAO already exists;
 		}
 		aux2 = aux1;

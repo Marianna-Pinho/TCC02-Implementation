@@ -69,7 +69,7 @@ float MEM_usage(){
         //printf("MemFree: %d\n", mfree);
     }
 
-    getline(&line,&len,p);
+    getline(&line,&len,p); //This line must be commented in the orange pi because meminfo is different.
     if(getline(&line,&len,p) != -1){
         strtok(line," ");
         mbuf = atoi(strtok(NULL, " "));
@@ -107,9 +107,9 @@ void* saveSystemStats(){
             continue;
         }
 
-        time_t now = getCurrentTimeMilli();
-        fprintf(fcpu,"%d,%d,%lf,%ld\n",COLLECTOR,HARDWARE_C,CPU_usage(),now);
-        fprintf(fmem,"%d,%d,%lf,%ld\n",COLLECTOR,HARDWARE_C,MEM_usage(),now);
+        long long int now = getCurrentTimeMilli();
+        fprintf(fcpu,"%d,%d,%lf,%lld\n",COLLECTOR,HARDWARE_C,CPU_usage(),now);
+        fprintf(fmem,"%d,%d,%lf,%lld\n",COLLECTOR,HARDWARE_C,MEM_usage(),now);
 
         fclose(fcpu);
         fclose(fmem);
@@ -134,7 +134,7 @@ void saveDecodingTime(double decTime){
         return;
     }
 
-    fprintf(fdec,"%d,%d,%lf,%ld\n", COLLECTOR, HARDWARE_C, decTime,getCurrentTimeMilli());
+    fprintf(fdec,"%d,%d,%lf,%lld\n", COLLECTOR, HARDWARE_C, decTime,getCurrentTimeMilli());
 
     fclose(fdec);
 }
@@ -153,6 +153,6 @@ void saveReceivedMessage(char *msg, char *path){
         return;
     }
 
-    fprintf(fmsg,"%d,%d,%s,%ld\n", COLLECTOR, HARDWARE_C, msg,getCurrentTimeMilli());
+    fprintf(fmsg,"%d,%d,%s,%lld\n", COLLECTOR, HARDWARE_C, msg,getCurrentTimeMilli());
     fclose(fmsg);
 }

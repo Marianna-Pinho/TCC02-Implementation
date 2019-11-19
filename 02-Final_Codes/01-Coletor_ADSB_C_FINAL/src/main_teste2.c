@@ -13,6 +13,7 @@
 // #include "adsb_db.h"
 // #include "adsb_createLog.h"
 // #include "adsb_network.h"
+// #include "adsb_systemStats.h"
 
 // adsbMsg *messagesList = NULL;
 
@@ -58,11 +59,19 @@
 //     SEM_init();
 
 //     pthread_t thread;
+//     pthread_t thread_stats;
     
+//     clock_t startStat, endStat;
 //     //This thread sends a hello to the server
 //     int sendHello = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
 //     if (sendHello){
 // 	 	printf("ERROR; return code from pthread_create() is %d\n", sendHello);
+//  		exit(-1);
+//  	}
+
+//     int readStats = pthread_create(&thread_stats, NULL, saveSystemStats, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+//     if (readStats){
+// 	 	printf("ERROR; return code from pthread_create() is %d\n", readStats);
 //  		exit(-1);
 //  	}
 
@@ -72,6 +81,9 @@
 //         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
 //         if(CRC_tryMsg(buffer, &syndrome)){
 
+//             saveReceivedMessage(buffer, ALL_MSG_FILE);
+
+//             startStat = clock();
 //             messagesList = decodeMessage(buffer, messagesList, &node);
 
 //             if(isNodeComplete(node) != NULL){
@@ -93,6 +105,9 @@
 //             }else{
 //                 //()printf("Information is not complete!\n");
 //             }
+
+//             endStat = clock();
+//             saveDecodingTime(((double)(endStat - startStat))/CLOCKS_PER_SEC);
 //         }
         
 //         node = NULL;
