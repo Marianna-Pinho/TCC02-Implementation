@@ -25,7 +25,7 @@ class DataUploader(Thread):
     bufferSizeLimit = None
 
 
-    def __init__(self, serverHost="www.radarlivre.com", sendHelloInterval=60000, sendADSBInfoInterval=500, bufferSizeLimit=2048):
+    def __init__(self, serverHost="www.radarlivre.com", sendHelloInterval=120, sendADSBInfoInterval=500, bufferSizeLimit=2048):
         Thread.__init__(self)
         self.__serverHost = serverHost
         self.sendHelloInterval = sendHelloInterval
@@ -39,15 +39,17 @@ class DataUploader(Thread):
 
         timeCount = 0
         while self.__running:
+            self.__sendADSBInfoToServer()
 
             if timeCount % self.sendHelloInterval == 0:
                self.__sendHelloToServer()
+               timeCount = 0
 
-            if timeCount % self.sendADSBInfoInterval == 0:
-               self.__sendADSBInfoToServer()
+            # if timeCount % self.sendADSBInfoInterval == 0:
+            #    self.__sendADSBInfoToServer()
 
+            sleep(.450)
             timeCount += 1
-            sleep(.001)
 
         self.onStop()
 
@@ -60,8 +62,6 @@ class DataUploader(Thread):
         self.__lockBuffer.release()
 
         # log.info("DataUploader: Adding adsbInfo: %d" % len(self.__adsbInfoBuffer))
-
-
 
     def __sendHelloToServer(self):
         log.info("DataUploader: Sending hello to server...")
@@ -79,7 +79,7 @@ class DataUploader(Thread):
         self.__lockBuffer.acquire()
 
         if self.__adsbInfoBuffer:
-            log.info("DataUploader: Sending data to server: %d" % len(self.__adsbInfoBuffer))
+            #log.info("DataUploader: Sending data to server: %d" % len(self.__adsbInfoBuffer))
 
             json = []
             for info in self.__adsbInfoBuffer:
@@ -98,7 +98,7 @@ class DataUploader(Thread):
             except Exception as err:
                 log.error("DataUploader: %s" % str(err))
 
-            log.info("DataUploader: Sending data to server: Done!")
+            #log.info("DataUploader: Sending data to server: Done!")
 
         self.__lockBuffer.release()
 

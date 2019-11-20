@@ -8,7 +8,7 @@ cpu and memory stats.
 //0: Collector C | 1: Collector Python
 #define COLLECTOR 0
 //0: Orange Pi | 1: Computador pessoal
-#define HARDWARE_C 0
+#define HARDWARE_C 1
 #define CPU_FILE    "stats_dir/cpu_usage_c.csv"
 #define MEM_FILE    "stats_dir/mem_usage_c.csv"
 #define DECTIME_FILE    "stats_dir/decoding_time_c.csv"

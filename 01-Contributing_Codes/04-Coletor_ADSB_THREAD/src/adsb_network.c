@@ -248,23 +248,29 @@ void* NET_dataUpload(){
 	int timeCount = 0;
 
 	while(1){
-        //printf("TImer: %d\n",timeCount);
+        printf("TImer: %d\n",timeCount);
+
+        if(sendList != NULL){
+                printf("Sending message to the server... %d\n", timeCount);
+                NET_postMsg();
+        }
+
 		if((timeCount % PUT_WAIT) == 0){
             printf("Sending hello to the server... %d\n", timeCount);
 			
             NET_putMsg();
             timeCount = 0;
 		}
-        if((timeCount % POST_WAIT) == 0){
+        // if((timeCount % POST_WAIT) == 0){
             
-            if(sendList != NULL){
-                printf("Sending message to the server... %d\n", timeCount);
-                NET_postMsg();
-            }
+        //     if(sendList != NULL){
+        //         printf("Sending message to the server... %d\n", timeCount);
+        //         NET_postMsg();
+        //     }
             
-        }
+        // }
 
-        usleep(1000);
+        usleep(450000); //900
         timeCount += 1;
 	}
 }
