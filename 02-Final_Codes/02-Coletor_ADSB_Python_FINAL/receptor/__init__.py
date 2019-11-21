@@ -10,7 +10,9 @@ from network.dataOutput import DataOutput
 
 from models import RawData, MessageBuffer, ADSBInfo
 from receptor.microADSB import MicroADSB
-
+from systemStats import SystemStats
+import time
+import threading
 
 from pyModeS import adsb
 
@@ -27,7 +29,7 @@ __RAW_BUFFER = {}
 __DATA_UPLOADER = DataUploader(serverHost=SERVER_HOST)
 __MICRO_ADSB = MicroADSB(autoReconnect=True)
 __DATA_OUTPUT = DataOutput(DATA_OUTPUT_HOST, DATA_OUTPUT_PORT)
-
+__SYSTEM_STATS = SystemStats()
 														
 def onOpen(err):
     if err:
@@ -49,38 +51,47 @@ def onErr(err):
 
 def onMessage(data):
     if data:
+        __SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.all_msg_file)
         rawData = RawData(data)
 
+        startStats = time.clock()
         if rawData.downlinkformat == 17 and len(rawData.frame) == 30:
-            icao = adsb.icao(rawData.frame[1:29]) 							
-            log.info("Raw Message Received: %s" % str(rawData.frame)) 		
+            __SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.adsb_msg_file)
 
-            __DATA_OUTPUT.addData(rawData.frame) 							
+            icao = adsb.icao(rawData.frame[1:29]) 							
+            #log.info("Raw Message Received: %s" % str(rawData.frame)) 		
+
+            #__DATA_OUTPUT.addData(rawData.frame) 							
             if not icao in __RAW_BUFFER:
                 __RAW_BUFFER[icao] = MessageBuffer(icao=icao)
 
             __RAW_BUFFER[icao].addRawData(rawData) 							
 
             if __RAW_BUFFER[icao].isComplete():
-                log.info("Complete Message Received: %s" % str(__RAW_BUFFER[icao]))
+                #log.info("Complete Message Received: %s" % str(__RAW_BUFFER[icao]))
                 adsbInfo = ADSBInfo.createFromMessageBuffer(__RAW_BUFFER[icao])
                
                 if(adsbInfo.DB_saveData() != 0):
-                   print("The aircraft information couldn't be saved!")
+                    pass
+                   #print("The aircraft information couldn't be saved!")
                 else:
-                    print("Aircraft information saved succesfully!")
+                    #print("Aircraft information saved succesfully!")
                 
                     info2sent = adsbInfo.DB_readData()
                     if(info2sent is None):
-                        print("We coudn't read the aircraft information\n")
+                        pass
+                        #print("We coudn't read the aircraft information\n")
                     else:
-                        print("We read the aircraft information\n")
+                        #print("We read the aircraft information\n")
                        
-                        log.info("Processed Complete Message: %s" % str(__RAW_BUFFER[icao]))
+                        #log.info("Processed Complete Message: %s" % str(__RAW_BUFFER[icao]))
                         __DATA_UPLOADER.addADSBInfo(info2sent)								
 
         else:
-            log.info("Invalid Raw Message Received: %s" % str(rawData.frame))
+            pass
+            #log.info("Invalid Raw Message Received: %s" % str(rawData.frame))
+        endStats = time.clock()
+        __SYSTEM_STATS.saveDecodingTime(endStats - startStats)
 
 
 def onUploaderStart():
@@ -104,9 +115,14 @@ def start():
     __DATA_UPLOADER.onStop = onUploaderStop
     __DATA_UPLOADER.start()
 
-    if DATA_OUTPUT_ENABLED:
-        global __DATA_OUTPUT
-        __DATA_OUTPUT.start()
+    global __SYSTEM_STATS
+    readStats = threading.Thread(target=__SYSTEM_STATS.saveSystemStats)
+    readStats.daemon = True
+    readStats.start()
+
+    # if DATA_OUTPUT_ENABLED:
+    #     global __DATA_OUTPUT
+    #     __DATA_OUTPUT.start()
 
     try:
         __running = True
@@ -128,3 +144,5 @@ def __stop():
     __DATA_UPLOADER.stop()
     __DATA_OUTPUT.stop()
     __MAP_BUFFER = None
+    
+    
