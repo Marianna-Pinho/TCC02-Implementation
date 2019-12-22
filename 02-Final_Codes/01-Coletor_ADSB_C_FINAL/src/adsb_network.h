@@ -12,7 +12,7 @@ with a remote server.
 
 #define PUT_URL "www.radarlivre.com:80/api/collector/"
 #define POST_URL    "www.radarlivre.com:80/api/adsb_info/"
-#define COLLECTOR_URL   "5980d171-73fb-46c1-aea1-e7b5d5c1de60/"
+#define COLLECTOR_URL   "collector_key/"
 
 //60000
 #define PUT_WAIT 120

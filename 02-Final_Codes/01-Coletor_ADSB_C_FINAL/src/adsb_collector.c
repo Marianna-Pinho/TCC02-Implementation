@@ -42,6 +42,7 @@ int main(){
     adsbMsg *nodePost = NULL;
 
     signal(2, suddenStop);
+
     //Starting Serial
     serialPort = SERIAL_start();
 
@@ -54,10 +55,10 @@ int main(){
     SEM_init();
 
     pthread_t thread;
-    pthread_t thread_stats;
+    //pthread_t thread_stats; (monography tests)
 
-    //To count the time spent to decode and save the messages
-    clock_t startStat, endStat;
+    //To count the time spent to decode and save the messages 
+    //clock_t startStat, endStat; (monography tests)
 
     //This thread sends a hello to the server and sends the messages of the list
     int sendHello = pthread_create(&thread, NULL, NET_dataUpload, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
@@ -67,12 +68,13 @@ int main(){
  		exit(-1);
  	}
 
-    int readStats = pthread_create(&thread_stats, NULL, saveSystemStats, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
+    //(monography tests)
+    /*int readStats = pthread_create(&thread_stats, NULL, saveSystemStats, NULL);					//Cria uma thread responsável apenas por mandar um Hello do coletor para o servidor, a cada 1 min.
     if (readStats){
 	 	//printf("ERROR; return code from pthread_create() is %d\n", readStats);
         LOG_add("adsb_collector","read Stats thread could not be created");
  		exit(-1);
- 	}
+ 	}*/
 
     while(1){   //Polling method
 
@@ -80,17 +82,18 @@ int main(){
 
         //This is used because the timer interrupt makes the buffer empty,
         //and we don't want to proccess an empty buffer.
-        //This also acts on the messages that are smaller than 112 bits.
         if(strlen(buffer) == 0){
             continue;
         }
-        //saves all the messages received
-        saveReceivedMessage(buffer, ALL_MSG_FILE);
+
+        //saves all the messages received 
+        //saveReceivedMessage(buffer, ALL_MSG_FILE); (monography tests)
 
         //If CRC returns 1, the message is correct. Otherwise, we don't do anything with the message.
         if(CRC_tryMsg(buffer, &syndrome)){
 
-            startStat = clock();
+            //startStat = clock(); (monography tests)
+
             messagesList = decodeMessage(buffer, messagesList, &node);
 
             if(isNodeComplete(node) != NULL){
@@ -114,8 +117,9 @@ int main(){
                 //()printf("Information is not complete!\n");
             }
 
-            endStat = clock();
-            saveDecodingTime(((double)(endStat - startStat))/CLOCKS_PER_SEC);
+            //(monography tests)
+            /*endStat = clock();
+            saveDecodingTime(((double)(endStat - startStat))/CLOCKS_PER_SEC);*/
         }
         
         node = NULL;

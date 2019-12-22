@@ -1,5 +1,7 @@
 import time
 
+#Monography tests class
+
 class SystemStats():
     
     collector = 1

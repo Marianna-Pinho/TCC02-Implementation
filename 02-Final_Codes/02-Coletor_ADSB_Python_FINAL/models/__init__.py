@@ -35,7 +35,7 @@ class MessageBuffer():
     dataPositionEven = []
     dataPositionOdd = []
     dataVelocity = []
-    __SYSTEM_STATS = SystemStats()
+   # __SYSTEM_STATS = SystemStats() (monography tests)
 
     def __init__(self, **kwargs):
         for k, v in kwargs.iteritems():
@@ -45,11 +45,13 @@ class MessageBuffer():
         self._checkDataAge()
         type = adsb.typecode(rawData.frame[1:29])
         if type >= 1 and type <= 4:
-            self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
+            #(monography tests)
+            #self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
             self.dataId = []
             self.dataId.append(rawData)
         elif type >= 9 and type <= 18:
-            self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
+            #(monography tests)
+            #self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
             flag = adsb.oe_flag(rawData.frame[1:29])
             if flag == 0:
                 self.dataPositionEven = []
@@ -60,11 +62,14 @@ class MessageBuffer():
                 self.dataPositionOdd.append(rawData)
                 self.dataPositionOdd.sort()
         elif type == 19:
-            self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
+            #(monography tests)
+            #self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.decoded_msg_file)
             self.dataVelocity = []
             self.dataVelocity.append(rawData)
         else:
-            self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.not_decoded_adsb_msg_file)
+            pass
+            #(monography tests)
+            #self.__SYSTEM_STATS.saveReceivedMessage(rawData.frame[1:29], self.__SYSTEM_STATS.not_decoded_adsb_msg_file)
 
     def _checkDataAge(self):
         for i in range(0, len(self.dataPositionEven)):

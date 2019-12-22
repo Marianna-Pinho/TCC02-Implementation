@@ -62,8 +62,7 @@ class DataUploader(Thread):
         self.__lockBuffer.release()
 
         # log.info("DataUploader: Adding adsbInfo: %d" % len(self.__adsbInfoBuffer))
-
-
+        
 
     def __sendHelloToServer(self):
         log.info("DataUploader: Sending hello to server...")

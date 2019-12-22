@@ -453,8 +453,9 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 	if((getDownlinkFormat(buffer) == 17) && (strlen(buffer) == 28)){ //It verifies if the message received is of ADS-B type
 		//()printf("\n\n***********ADSB MESSAGE*************\n");
 		//()printf("MESSAGE:%s\n", buffer);
-		saveReceivedMessage(buffer, ADSB_MSG_FILE);
-//Catching ICAO
+		
+		//saveReceivedMessage(buffer, ADSB_MSG_FILE); (monography tests)
+		//Catching ICAO
 		getICAO(buffer, icao);
 		
 		if(messages == NULL){
@@ -476,9 +477,10 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 		//()printf("ICAO:%s\n", no->ICAO); 
 		//()printf("-----------------------------------------------------------\n");
 
-//Catching the Callsign
+		//Catching the Callsign
 		if((1 <= getTypecode(buffer)) && (getTypecode(buffer) <= 4)){
-			saveReceivedMessage(buffer, DECODED_MSG_FILE);
+			
+			//saveReceivedMessage(buffer, DECODED_MSG_FILE); (monography tests)
 			
 			if(getCallsign(buffer, no->callsign) < 0){
 				//()printf("ADS-B Decoding Error: callsign couldn't be decoded!\n");
@@ -495,9 +497,10 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 
 		}
 
-//Catching Latitude, Longitude and Altitude
+		//Catching Latitude, Longitude and Altitude
 		else if(isPositionMessage(buffer)){
-			saveReceivedMessage(buffer, DECODED_MSG_FILE);
+			
+			//saveReceivedMessage(buffer, DECODED_MSG_FILE); (monography tests)
 
 			no = setPosition(buffer, no);
 			
@@ -527,9 +530,10 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 
 			}		
 		}
-//Catching the velocity
+		//Catching the velocity
 		else if(getTypecode(buffer) == 19){
-			saveReceivedMessage(buffer, DECODED_MSG_FILE);
+			
+			//saveReceivedMessage(buffer, DECODED_MSG_FILE); (monography tests)
 
 			if(getVelocities(buffer, &vel_h, &heading, &rateV, tag) < 0){
 				//()printf("ADS-B Decoding Error: velocities couldn't be decoded!\n");
@@ -549,15 +553,13 @@ adsbMsg* decodeMessage(char* buffer, adsbMsg* messages, adsbMsg** nof){
 			//()printf("|VELH: %f\n|HEAD: %f\n|RATEV: %d\n|TAG: %s\n",no->horizontalVelocity, no->groundTrackHeading, no->verticalVelocity,tag); 
 			//()printf("-------------------------------------------------------------------------------\n");
 
-		}else{
-			saveReceivedMessage(buffer, NOT_DECODED_ADSB_MSG_FILE);
-		}
+		}/*else{
+			saveReceivedMessage(buffer, NOT_DECODED_ADSB_MSG_FILE); (monography tests)
+		}*/
 	
 		//It reorders the messages list according with the update time
 		no->uptadeTime = getCurrentTime();
-		if((LastNode = LIST_orderByUpdate(no->ICAO, LastNode, &messages)) == NULL){
-			//()printf("It wasn't possible to sort the list\n");
-		}
+		LastNode = LIST_orderByUpdate(no->ICAO, LastNode, &messages);
 		
 	}else{
 		//()printf("\n\n###############No ADS-B Message#####################\n");
@@ -588,11 +590,6 @@ adsbMsg* isNodeComplete(adsbMsg *node){
 
 	if((strlen(node->oeMSG[0]) != 0) && (strlen(node->oeMSG[1]) != 0)){ //It verifies if there are the two position messages
 		if((node->messageVEL[0] != 0) && (node->callsign[0] != 0)){	// It verifies if there is velocity and callsign messages
-			
-			//node->oeMSG[!(node->lastTime)][0] = '\0'; //It cleans up the oldest message			
-			//node->Altitude = 0;
-			//node->Latitude = 0;
-			//node->Longitude = 0;
 
 			return node;
 		}
@@ -614,12 +611,6 @@ void clearMinimalInfo(adsbMsg *node){
 	if(node == NULL){
 		return;
 	}
-
-	//node->oeMSG[!(node->lastTime)][0] = '\0'; //It cleans up the oldest message			
-	// node->Altitude = 0;
-	// node->Latitude = 0;
-	// node->Longitude = 0;
-
 	node->oeMSG[0][0] = '\0'; //Even
 	node->oeMSG[1][0] = '\0'; //Odd
 	node->messageVEL[0] = '\0'; //Velocity

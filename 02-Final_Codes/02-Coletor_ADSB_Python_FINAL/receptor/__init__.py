@@ -51,12 +51,16 @@ def onErr(err):
 
 def onMessage(data):
     if data:
-        __SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.all_msg_file)
+        #(monography tests)
+        #__SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.all_msg_file)
+       
         rawData = RawData(data)
 
-        startStats = time.clock()
+        #startStats = time.clock() (monography tests)
         if rawData.downlinkformat == 17 and len(rawData.frame) == 30:
-            __SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.adsb_msg_file)
+           
+           #(monography tests)
+            #__SYSTEM_STATS.saveReceivedMessage(data['frame'][1:-1], __SYSTEM_STATS.adsb_msg_file)
 
             icao = adsb.icao(rawData.frame[1:29]) 							
             #log.info("Raw Message Received: %s" % str(rawData.frame)) 		
@@ -71,7 +75,8 @@ def onMessage(data):
                 #log.info("Complete Message Received: %s" % str(__RAW_BUFFER[icao]))
                 adsbInfo = ADSBInfo.createFromMessageBuffer(__RAW_BUFFER[icao])
                
-                if(adsbInfo.DB_saveData() != 0):
+                #(monography tests)
+                '''if(adsbInfo.DB_saveData() != 0):
                     pass
                    #print("The aircraft information couldn't be saved!")
                 else:
@@ -83,15 +88,18 @@ def onMessage(data):
                         #print("We coudn't read the aircraft information\n")
                     else:
                         #print("We read the aircraft information\n")
-                       
                         #log.info("Processed Complete Message: %s" % str(__RAW_BUFFER[icao]))
-                        __DATA_UPLOADER.addADSBInfo(info2sent)								
+                        __DATA_UPLOADER.addADSBInfo(info2sent)'''		
+                #log.info("Processed Complete Message: %s" % str(__RAW_BUFFER[icao]))
+                __DATA_UPLOADER.addADSBInfo(adsbInfo)				
 
         else:
             pass
             #log.info("Invalid Raw Message Received: %s" % str(rawData.frame))
-        endStats = time.clock()
-        __SYSTEM_STATS.saveDecodingTime(endStats - startStats)
+        
+        #(monography tests)
+        #endStats = time.clock()
+        #__SYSTEM_STATS.saveDecodingTime(endStats - startStats)
 
 
 def onUploaderStart():
@@ -115,10 +123,11 @@ def start():
     __DATA_UPLOADER.onStop = onUploaderStop
     __DATA_UPLOADER.start()
 
-    global __SYSTEM_STATS
+    #(monography tests)
+    '''global __SYSTEM_STATS
     readStats = threading.Thread(target=__SYSTEM_STATS.saveSystemStats)
     readStats.daemon = True
-    readStats.start()
+    readStats.start()'''
 
     # if DATA_OUTPUT_ENABLED:
     #     global __DATA_OUTPUT
