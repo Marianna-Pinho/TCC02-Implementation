@@ -7,7 +7,7 @@ This is an ADS-B (Automatic Dependent Surveillance - Broadcast) messages decodin
 
 The system performs four main activities, which are: the reading of a serial port for communication with the micro [ADS-B receptor](https://www.google.com/url?q=http://www.anteni.net/adsb/index.html%23!/microADSB-USB-receiver/p/15504142/category%3D3647494&sa=D&ust=1580750718822000&usg=AFQjCNEDi4bLTWrB6PAnjjdxSLeQZRJJ5A), which catches the ADS-B messages; the decoding of the received ADS-B messages, to extract position, velocity and identification information; the storing of this information in a local database; and the sending of this information to a remote server which belongs to the RadarLivre Project.
 
-The systems is composed of two threads: the first one performs the reading of the serial port, the decoding of the ADS-B messages and the storing of the information in the local database; the second thread sends a “hello” to the remote server every one minute and sends the information obtained from the ADS-B messages every 500 milliseconds. A fluxogram of these operations can be seen in the Figure 1.
+The system is composed of two threads: the first one performs the reading of the serial port, the decoding of the ADS-B messages and the storing of the information in the local database; the second thread sends a “hello” to the remote server every one minute and sends the information obtained from the ADS-B messages every 500 milliseconds. A fluxogram of these operations can be seen in the Figure 1.
 
 ![ADS-B C Collector](https://github.com/Marianna-Pinho/TCC02-Implementation/blob/master/Diagrama%20do%20Coletor%20ADS-B%20em%20C%20%28english%29.png)
 
