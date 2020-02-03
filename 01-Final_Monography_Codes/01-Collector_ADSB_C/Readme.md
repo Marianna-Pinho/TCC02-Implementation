@@ -26,7 +26,7 @@ The system saves the following information about the aircrafts that send ADS-B m
 	
 **3. Velocity information** <br>
 	a. Vertical velocity <br>
-	b. Horizontal velocity
+	b. Horizontal velocity <br>
 	c. Heading
 
 It is important to note that the Latitude and Longitude information is decoded based on Odd and Even position messages.
