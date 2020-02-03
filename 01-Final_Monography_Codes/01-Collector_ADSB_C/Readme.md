@@ -15,17 +15,17 @@ The systems is composed of two threads: the first one performs the reading of th
 
 The system saves the following information about the aircrafts that sends ADS-B messages:
 
-**1.  Identification information**
-	a. ICAO
+**1.  Identification information**<br>
+	a. ICAO<br>
 	b. Callsign
 	
-**2.  Position information**
-	a. Latitude
-	b. Longitude
+**2.  Position information**<br>
+	a. Latitude<br>
+	b. Longitude<br>
 	c. Altitude
 	
-**3. Velocity information**
-	a. Vertical velocity
+**3. Velocity information** <br>
+	a. Vertical velocity <br>
 	b. Horizontal velocity
 	c. Heading
 
