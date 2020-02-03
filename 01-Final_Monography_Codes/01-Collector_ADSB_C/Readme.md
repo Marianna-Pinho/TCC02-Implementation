@@ -13,7 +13,7 @@ The system is composed of two threads: the first one performs the reading of the
 
 ## ADS-B Information
 
-The system saves the following information about the aircrafts that sends ADS-B messages:
+The system saves the following information about the aircrafts that send ADS-B messages:
 
 **1.  Identification information**<br>
 	a. ICAO<br>
